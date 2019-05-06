@@ -1,0 +1,1 @@
+{"version":3,"sources":["base/_index.scss"],"names":[],"mappings":"AAAA,KACI,0BAA2B,CAC9B,EAGG,iCAAY,CAAZ,yBAA0B","file":"application.min.css","sourcesContent":["body {\n    background-color: lightpink;\n}\n\na {\n    transition: all 320ms ease;\n}\n"]}

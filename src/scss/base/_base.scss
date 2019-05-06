@@ -1,0 +1,137 @@
+/*----------------------------------*/
+/*   _base.scss  (body, h1, p etc)  */
+/*----------------------------------*/
+
+// Any padding or border that’s applied
+// will not be added to the rendered width
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+html, body {
+  min-height: 100%;//Required to resolve incomplete Overlay
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: var(--Theme-Color-Grey-Md);
+}
+*/
+
+
+
+// Fonts
+@import url($font-url--heading);
+@import url($font-url--body);
+
+
+
+/* Global CSS4 Color Variables */
+:root { 
+  --Theme-Color-Lt:       #00d6db;
+  --Theme-Color:          #00b1db;
+  --Theme-Color-Md:       #009fdb;
+  --Theme-Color-Dk:       #007adb;
+  --Theme-Color-Yellow:   #eccd10;
+  --Theme-Color-Red:      #ec3516;
+  --Theme-Color-Grey-Lt:  #ecebeb;
+  --Theme-Color-Grey-Md:  #d9d7d7;
+  --Theme-Color-Grey:     #969091;
+  --Theme-Color-Grey-Dk:  #515151;
+  --Theme-Color-Black:    #474747;
+  --Theme-Color-White:    #fff;
+  --Theme-Color-White-Lt: #f5f5f5;
+  --Body-Text-Color:      #666;
+  --figCaption-Color:     rgba(0, 0, 0, 0.9);
+  --Overlay:              rgba(0, 0, 0, 0.5);
+}
+
+
+
+body {
+    color: ;
+    font-size: ;
+    line-height: ;
+    font-family: ;
+}
+
+
+
+header {}
+
+
+
+h1 {}
+
+
+
+h2 {}
+
+
+
+h3 {}
+
+
+
+h4 {}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+p {
+    font-size: ;
+    line-height: ;
+    margin: ;
+    font-weight: ;
+}
+
+
+
+blockquote {
+    font-size: ;
+    font-style: ;
+    line-height: ;
+    font-weight: ;
+    margin: ;
+    padding: ;
+    border-left: solid size color, ;
+}
+
+
+
+/* Lists */
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+
+/* Form Elements */
+
+input, 
+textarea {
+	display: block;
+	outline: 0;
+	border: 0;
+}
+
+input:focus, 
+textarea:focus {
+	transition: ;
+}
+
+/* Button */
+
+button {
+	outline: 0;
+}
