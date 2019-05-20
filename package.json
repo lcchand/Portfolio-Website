@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lcchand/Portfolio-Website#readme",
   "devDependencies": {
     "browser-sync": "^2.26.5",
+    "del": "^4.1.1",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-if": "^2.0.2",

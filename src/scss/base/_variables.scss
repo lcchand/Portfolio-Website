@@ -1,0 +1,86 @@
+/*----------------------------------*/
+/* _variables.scss  (Global Settings /
+/*----------------------------------*/
+
+// Google Fonts - https://fonts.google.com/
+/* Fonts: Cormorant Garamond, Nunito Sans, Quattrocento Sans */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Nunito+Sans|Quattrocento+Sans&display=swap');
+
+
+
+// Any padding or border that’s applied
+// will not be added to the rendered width
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* SCSS Variables */
+    // Media query Breakpoints
+    $brk-mobile           : '(min-width: 320px)';
+    $brk-mobile-landscape : '(min-width: 568px)';
+    $brk-tablet           : '(min-width: 768px)';
+    $brk-desktop          : '(min-width: 1024px)';
+    $brk-1278             : '(min-width: 1278px)';
+    $brk-1400             : '(min-width: 1400px)';
+    $brk-max              : '(min-width: 1440px)';
+
+    
+
+
+/* Global CSS3 Variables */
+:root {
+    // Font Stacks
+    // Intro (Google Fonts: 'Cormorant Garamond
+    --font-family-intro: 'Cormorant Garamond', serif;
+    // Headings (Google Fonts: Quattrocento Sans)
+    --font-family--heading:      'Quattrocento Sans', sans-serif;
+    // Body (Google Font: Nunito Sans)
+    --font-family--body:         'Nunito Sans', sans-serif;
+
+    // Font Weights
+    --heading-weight-regular:     400;
+    --heading-weight-italic:      400i;
+    --heading-weight-bold:        700;
+    --body-weight-regular:        400;
+    --body-weight-italic:         400i;
+    --body-weight-bold:           700;
+    
+    // Global Colors
+    --Theme-Color-Lt:             #00d6db;
+    --Theme-Color:                #00b1db;
+    --Theme-Color-Md:             #009fdb;
+    --Theme-Color-Dk:             #007adb;
+    --Theme-Color-Yellow:         #eccd10;
+    --Theme-Color-Red:            #ec3516;
+    --Theme-Color-Grey-Lt:        #ecebeb;
+    --Theme-Color-Grey-Md:        #d9d7d7;
+    --Theme-Color-Grey:           #969091;
+    --Theme-Color-Grey-Dk:        #515151;
+    --Theme-Color-Black:          #474747;
+    --Theme-Color-White:          #fff;
+    --Theme-Color-White-Lt:       #f5f5f5;
+    --Body-Text-Color:            #666;
+    --figCaption-Color:           rgba(0, 0, 0, 0.9);
+    --Overlay:                    rgba(0, 0, 0, 0.5);
+
+    // Global Layout
+    --min-width            : 320px;
+    --mx-width             : 1440px;
+    
+    
+
+}
+
+
+
+
+html, body {
+  min-height: 100%;//Required to resolve incomplete Overlay
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--Theme-Color-Grey-Md);
+}

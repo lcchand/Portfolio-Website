@@ -2,59 +2,15 @@
 /*   _base.scss  (body, h1, p etc)  */
 /*----------------------------------*/
 
-// Any padding or border that’s applied
-// will not be added to the rendered width
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*
-html, body {
-  min-height: 100%;//Required to resolve incomplete Overlay
-  min-width: 320px;
-  max-width: 1440px;
-  margin: 0 auto;
-  background: var(--Theme-Color-Grey-Md);
-}
-*/
-
-
-
-// Fonts
-@import url($font-url--heading);
-@import url($font-url--body);
-
-
-
-/* Global CSS4 Color Variables */
-:root { 
-  --Theme-Color-Lt:       #00d6db;
-  --Theme-Color:          #00b1db;
-  --Theme-Color-Md:       #009fdb;
-  --Theme-Color-Dk:       #007adb;
-  --Theme-Color-Yellow:   #eccd10;
-  --Theme-Color-Red:      #ec3516;
-  --Theme-Color-Grey-Lt:  #ecebeb;
-  --Theme-Color-Grey-Md:  #d9d7d7;
-  --Theme-Color-Grey:     #969091;
-  --Theme-Color-Grey-Dk:  #515151;
-  --Theme-Color-Black:    #474747;
-  --Theme-Color-White:    #fff;
-  --Theme-Color-White-Lt: #f5f5f5;
-  --Body-Text-Color:      #666;
-  --figCaption-Color:     rgba(0, 0, 0, 0.9);
-  --Overlay:              rgba(0, 0, 0, 0.5);
-}
-
-
 
 body {
-    color: ;
-    font-size: ;
-    line-height: ;
-    font-family: ;
+    color: var(--Body-Text-Color);
+    font-size: 16px;
+    line-height: 1.2em;
+    font-family: var(--font-family--body);
+    font-weight: var(--body-weight-regular);
+    background: #fff;
+    color: var(--Body-Text-Color);
 }
 
 
@@ -62,29 +18,35 @@ body {
 header {}
 
 
+h1, h2, h3 {
+    font-family: var(font-family--heading);
+}
+  
 
-h1 {}
+h1 {
+  font-weight: var(--heading-weight-bold);
+  font-size: 24px;
+  letter-spacing: 0.2em;
+}
 
+h3 {
 
+    @media #{$brk-tablet} {
+	padding-bottom: .25em;
+    }
+}
 
-h2 {}
-
-
-
-h3 {}
-
-
-
-h4 {}
-
-
+figure {
+  padding: 0;
+  margin: 0;
+}
 
 a {
-    text-decoration: none;
+     text-decoration: none;
 }
 
 
-
+/*
 p {
     font-size: ;
     line-height: ;
@@ -103,7 +65,7 @@ blockquote {
     padding: ;
     border-left: solid size color, ;
 }
-
+*/
 
 
 /* Lists */
@@ -125,10 +87,13 @@ textarea {
 	border: 0;
 }
 
+/*
 input:focus, 
 textarea:focus {
 	transition: ;
 }
+*/
+
 
 /* Button */
 
