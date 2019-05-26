@@ -1,5 +1,5 @@
 /*----------------------------------*/
-/* _variables.scss  (Global Settings /
+/* _variables.scss (Global Settings)*/
 /*----------------------------------*/
 
 // Google Fonts - https://fonts.google.com/
@@ -8,8 +8,8 @@
 
 
 
-// Any padding or border that’s applied
-// will not be added to the rendered width
+/* Any padding or border that’s applied
+   will not be added to the rendered width */
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@
 
 
 /* SCSS Variables */
-    // Media query Breakpoints
+// Media query Breakpoints - because CSS variables do not work in SCSS Media Queries
     $brk-mobile           : '(min-width: 320px)';
     $brk-mobile-landscape : '(min-width: 568px)';
     $brk-tablet           : '(min-width: 768px)';
@@ -68,7 +68,7 @@
 
     // Global Layout
     --min-width            : 320px;
-    --mx-width             : 1440px;
+    --max-width            : 1440px;
     
     
 
