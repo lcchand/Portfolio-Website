@@ -1,7 +1,5 @@
-body {
-    background-color: lightpink;
-}
+/* Base Folder Imports */
 
-a {
-    transition: all 320ms ease;
-}
+@import 'normalize';
+@import 'variables';
+@import 'base';

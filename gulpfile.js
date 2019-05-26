@@ -9,6 +9,7 @@
 // Load required Node programs: installed in the 'node_mdules' folder
 // package.json: devDependencies
 const gulp = require('gulp');
+const del = require('del');
 const rename = require('gulp-rename');
 const gulpif = require('gulp-if');
 const imagemin = require('gulp-imagemin');
@@ -20,7 +21,7 @@ const browserSync = require('browser-sync').create();
 
 
 // Options
-const minify = true;
+const minify = false;
 
 
 // Configure paths for Project Directory Structure
@@ -41,6 +42,14 @@ const jsDist = `${dist}/js`;
 
 
 // Functions
+
+
+// delete files in folder: sassDist but do not delete folder
+function delCSS(done) {
+    console.log(`Deleting CSS Files in folder: ${sassDist}`);
+    del.sync([`${sassDist}/**/*`, `!${sassDist}`]);
+    done();
+}
 
 
 // compile scss into css (minify, autoprefixer, sourcemaps)
@@ -74,7 +83,9 @@ function style(done) {
 // Copy All HTML files from src to dist
 function copyHtml(done) {
     gulp.src(`${htmlSrc}/*.html`)
-	.pipe(gulp.dest(htmlDist));
+	.pipe(gulp.dest(htmlDist))
+    // stream changes to all browsers
+	.pipe(browserSync.stream());
 	done();
 }
 
@@ -90,10 +101,12 @@ function images(done) {
 }
 
 
-// Copy JS
+// Copy JS from src to dist
 function copyJS(done) {
     gulp.src(`${jsSrc}/*.js`)
-	.pipe(gulp.dest(jsDist));
+	.pipe(gulp.dest(jsDist))
+     // stream changes to all browsers
+	.pipe(browserSync.stream());
     done();
 }
 
@@ -106,12 +119,16 @@ function watch() {
 	    baseDir: `${dist}`
 	}
     });
+    // Run - 'delCSS' function if any scss files change:
+    gulp.watch(`${sassSrc}/**/*.scss`, delCSS);
     // Run - 'style' function if any scss files change:
     gulp.watch(`${sassSrc}/**/*.scss`, style);
     // Run - browser reload if any HTML files change
-    gulp.watch(`${htmlSrc}/*.html`).on('change', browserSync.reload);
+    gulp.watch(`${htmlSrc}/*.html`, copyHtml);
+    //gulp.watch(`${htmlSrc}/*.html`).on('change', browserSync.reload);
     // Run - browser reload if any Javascript files change
-    gulp.watch(`${jsSrc}/**/*.js`).on('change', browserSync.reload);
+    gulp.watch(`${jsSrc}/**/*.js`, copyJS);
+    //gulp.watch(`${jsSrc}/**/*.js`).on('change', browserSync.reload);
 }
 
 
@@ -121,7 +138,7 @@ gulp.task('default', gulp.series(style, copyHtml, copyJS, watch));
 
 
 
-
+exports.delCSS = delCSS;
 exports.copyHtml = copyHtml;
 exports.images = images;
 exports.copyJS = copyJS;

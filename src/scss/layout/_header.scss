@@ -1,0 +1,176 @@
+/*----------------------------------*/
+/* _header.scss                 */
+/*----------------------------------*/
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 55px;
+    background:var(--Theme-Color);
+    color: var(--Theme-Color-White);
+    //padding: 10px;
+    padding: 10px 0;
+    position: relative;
+
+    @media #{$brk-tablet} {
+	height: 56px;
+	justify-content: space-between;
+    }
+
+}
+
+
+.logo {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+
+
+.logo a {
+    color: var(--Theme-Color-White-Lt);
+    text-decoration: none;
+    display: block;
+    padding: 16px;
+
+    @media #{$brk-tablet} {
+	padding: 17px 25px;
+    }
+}
+
+
+
+/* Nav Settings ----------------- */
+.main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background: var(--Theme-Color-Grey);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    z-index: 1;// Rise above .sectionhead pseudo elements
+    
+    @media #{$brk-tablet} {
+	position: relative;
+	top: unset;
+	right: unset;
+	max-height: unset;// Returns content height to default
+	background: transparent;
+    }
+
+}
+
+
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media #{$brk-tablet} {
+	display: flex;
+	flex-direction: row;
+    }
+}
+
+.main-nav li {
+    border-bottom: 1px solid var(--Theme-Color-Grey-Md);
+    letter-spacing: 0.0625em;
+
+    @media #{$brk-tablet} {
+	border-bottom: none;
+    }
+}
+
+.main-nav:last-child {
+    border-bottom: none;
+}
+
+.main-nav a {
+  color: var(--Theme-Color-White-Lt);
+  text-decoration: none;
+  display: block;
+  padding: 2em 7em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media #{$brk-tablet} {
+    margin: 0;
+    padding: 17px;
+  }
+  
+}
+
+
+
+
+// Hover State for Navigation
+.logo a:hover,
+.logo a:focus,
+.main-nav a:hover,
+.main-nav a:focus {
+    background: var(--Theme-Color-Yellow);
+    color: var(--Body-Text-Color);
+}
+
+
+
+
+
+/* Mobile Nav Settings ----------------- */
+
+.mobile-nav {
+    padding: 1em; //16px
+    position: absolute;
+    right: .5em;//.5em
+    cursor: pointer;
+
+        @media #{$brk-tablet} {
+	display: none;
+    }
+
+}
+
+
+
+// Hamburger Animation
+.mobile-nav--open {
+    transform: rotate(45deg);
+}
+
+.mobile-nav--open .hamburger::before {
+    opacity: 0;
+}
+
+.mobile-nav--open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+
+// Actual Stacked 3 Bar Element ------
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: var(--Theme-Color-White-Lt);
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.hamburger::before {
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    transform: translateY(4px);
+}
+
