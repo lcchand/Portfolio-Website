@@ -7,7 +7,8 @@ const mainNav = document.getElementById("main-nav");
 const mainNavUl = document.querySelector('ul');
 const mainNavLinks = mainNavUl.children;
 
-mobileNav.addEventListener('click', function() {
+
+function menuToggle() {
     //console.log('click');
     mobileNav.classList.toggle('mobile-nav--open');
     // If it has a positive value
@@ -21,11 +22,16 @@ mobileNav.addEventListener('click', function() {
 	mainNav.style.width = "calc(100vw)";
     }
 
-});
+};
 
 
 
-mainNavUl.addEventListener('click', function() {
-    mobileNav.classList.toggle('');
-});
+// Capture Click Event on Hamburger
+mobileNav.addEventListener('click', menuToggle);
 
+
+// Capture Click Event on Mobile Menu & close after selection
+mainNavUl.addEventListener('click', menuToggle);
+
+// Capture keydown Event on Mobile Menu & close after selection
+mainNavUl.addEventListener('keydown', menuToggle);

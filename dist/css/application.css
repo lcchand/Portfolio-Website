@@ -18,7 +18,7 @@ Base Styles -
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Nunito+Sans|Quattrocento+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700,700i|Nunito+Sans|Quattrocento+Sans&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -377,6 +377,7 @@ template {
   --heading-weight-regular:     400;
   --heading-weight-italic:      400i;
   --heading-weight-bold:        700;
+  --heading-weight-bold-italic:  700i;
   --body-weight-regular:        400;
   --body-weight-italic:         400i;
   --body-weight-bold:           700;
@@ -497,13 +498,50 @@ button {
 /*----------------------------------*/
 /* _containers.scss                 */
 /*----------------------------------*/
+.introduction {
+  font-family: var(--font-family-intro);
+  font-weight: var(--heading-weight-bold);
+  font-style: italic;
+  font-size: 3em;
+}
+
+#webdev {
+  background-color: var(--Theme-Color-Dk);
+}
+
+.sectionhead {
+  font-family: var(--font-family-heading);
+  font-weight: var(--heading-weight-bold);
+  padding: 1em;
+  color: var(--Theme-Color-White);
+}
+
 .gallery {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4;
+}
+
+.gallery .pw-full-width {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 50%;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.gallery figcaption {
+  display: none;
+}
+
+.pw-full-width img {
+  width: 200%;
 }
 
 /*----------------------------------*/
-/* _header.scss                 */
+/* _header.scss                     */
 /*----------------------------------*/
 header {
   display: -webkit-box;

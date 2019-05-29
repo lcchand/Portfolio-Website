@@ -2,8 +2,10 @@
 // Testing Gulp by adding a comment...
 
 const mobileNav = document.getElementById("mobilenav");
-//const mobileNavLinks = mobileNav.getElementsByTagName('li');
+
 const mainNav = document.getElementById("main-nav");
+const mainNavUl = document.querySelector('ul');
+const mainNavLinks = mainNavUl.children;
 
 mobileNav.addEventListener('click', function() {
     //console.log('click');
@@ -22,10 +24,8 @@ mobileNav.addEventListener('click', function() {
 });
 
 
-/*
-mobileNav.addEventListener('', function() {
-    //mainNav.style.maxHeight = null;
-    mainNav.style.maxHeight = null;
-    
+
+mainNavUl.addEventListener('click', function() {
+    mobileNav.classList.toggle('');
 });
-*/
+

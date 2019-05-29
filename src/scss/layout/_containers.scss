@@ -2,9 +2,57 @@
 /* _containers.scss                 */
 /*----------------------------------*/
 
+.introduction {
+    font-family: var(--font-family-intro);
+    font-weight: var(--heading-weight-bold);
+    font-style: italic;
+    font-size: 3em;
+}
+
+
+
+#webdev {
+    background-color: var(--Theme-Color-Dk);
+}
+
+
+
+.sectionhead {
+    font-family: var(--font-family-heading);
+    font-weight: var(--heading-weight-bold);
+    padding: 1em;
+    color: var(--Theme-Color-White);
+}
+
+
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 4;
 }
+
+.gallery .pw-full-width {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 50%;
+}
+
+
+
+.gallery img {
+    width: 100%;
+}
+
+
+
+.gallery figcaption {
+    display: none;
+}
+
+
+
+.pw-full-width img {
+    width: 200%;
+}
+    

@@ -1,9 +1,10 @@
 /*----------------------------------*/
-/* _header.scss                 */
+/* _header.scss                     */
 /*----------------------------------*/
 
 
 header {
+    //position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -130,7 +131,7 @@ header {
     right: .5em;//.5em
     cursor: pointer;
 
-        @media #{$brk-tablet} {
+   @media #{$brk-tablet} {
 	display: none;
     }
 
