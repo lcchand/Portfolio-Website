@@ -34,7 +34,7 @@ article.portfolio {
     @media #{$brk-tablet} {
 	flex-direction: row;
         flex: 1 1 45%;
-        margin: 0.91145833333333%; // 7 / 768 = 5.5px
+        //margin: 0.91145833333333%; // 7 / 768 = 5.5px
 	border: 1px solid var(--Theme-Color-Black);
     }
 
