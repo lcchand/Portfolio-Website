@@ -2,11 +2,13 @@
 /* _variables.scss (Global Settings)*/
 /*----------------------------------*/
 
-// Google Fonts - https://fonts.google.com/
-/* Fonts: Cormorant Garamond, Nunito Sans, Quattrocento Sans */
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700,700i|Nunito+Sans|Quattrocento+Sans&display=swap');
-
-
+/*
+   Google Fonts - https://fonts.google.com/
+   Fonts: Cormorant Garamond (Regular 400 & Regular 400 Italic, Bold 700 & Bold 700 Italic)
+          Nunito Sans (Regular 400 & Regular 400 Italic, Bold 700)
+          Quattrocento Sans (Regular 400 & Regular 400 Italic, Bold 700)
+*/
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap');
 
 /* Any padding or border that’s applied
    will not be added to the rendered width */
@@ -33,18 +35,28 @@
 /* Global CSS3 Variables */
 :root {
     // Font Stacks
-    // Intro (Google Fonts: 'Cormorant Garamond
-    --font-family-intro: 'Cormorant Garamond', serif;
-    // Headings (Google Fonts: Quattrocento Sans)
-    --font-family--heading:      'Quattrocento Sans', sans-serif;
-    // Body (Google Font: Nunito Sans)
-    --font-family--body:         'Nunito Sans', sans-serif;
+    // Intro (Google Fonts: Cormorant Garamond Regular 400 & Regular 400 Italic, Bold 700 & Bold 700 Italic)
+    --font-family-intro: 'Cormorant Garamond', Georgia, serif;
 
+    
+    // Headings (Google Fonts: Quattrocento Sans Regular 400 & Regular 400 Italic, Bold 700)
+    --font-family--heading:      'Quattrocento Sans', Geneva, Tahoma, sans-serif;
+
+
+    
+    // Body (Google Font: Nunito Sans Regular 400 & Regular 400 Italic, Bold 700)
+    --font-family--body:         'Nunito Sans', Verdana, sans-serif;
+
+
+    
     // Font Weights
+    --intro-weight-regular:       400;
+    --intro-weight-italic:        400i;
+    --intro-weight-bold:          700;
+    --intro-weight-bold-italic:   700i;
     --heading-weight-regular:     400;
     --heading-weight-italic:      400i;
     --heading-weight-bold:        700;
-    --heading-weight-bold-italic:  700i;
     --body-weight-regular:        400;
     --body-weight-italic:         400i;
     --body-weight-bold:           700;

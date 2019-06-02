@@ -1,0 +1,51 @@
+/*----------------------------------*/
+/* _gallery.scss                 */
+/*----------------------------------*/
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3;
+
+    & img {
+	width: 100%;
+    }
+
+    & figcaption {
+	display: none;
+    }
+
+    & .doublewidth {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    }
+    
+}
+
+/*
+.gallery+article.portfolio+doublewidth {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 50%;
+}
+*/
+
+/*
+.gallery img {
+    width: 100%;
+}
+
+
+
+.gallery figcaption {
+    display: none;
+}
+
+
+.pw-full-width img {
+    width: 200%;
+}
+   
+*/

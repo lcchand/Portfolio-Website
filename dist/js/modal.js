@@ -24,11 +24,11 @@ let bodyElement = document.getElementById('container');
 bodyElement.appendChild(overlayElement);
 overlayElement.appendChild(modalElement);
 
-// Select all Elements with a Class Name of: portfolio-widget
-const selectedWork = document.getElementsByClassName('portfolio-widget');
+// Select all Article Elements with a Class Name of: portfolio
+const selectedWork = document.getElementsByClassName('portfolio');
 
 /* --- Event Listeners -------------------------------------------- */
-// Capture Click Event on all Portfolio Widgets
+// Capture Click Event on all Portfolio classed Articles
 for (let i = 0; i < selectedWork.length; i++) {
     selectedWork[i].addEventListener('click', openModal);
 }

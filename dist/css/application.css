@@ -7,7 +7,8 @@ Utilities -
 */
 /* 
 ==========================================================================
-Base Styles - 
+Base Styles - Defines what elements look like by default
+              Reset & Defaults
 ==========================================================================
 */
 /* Base Folder Imports */
@@ -18,7 +19,7 @@ Base Styles -
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700,700i|Nunito+Sans|Quattrocento+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -358,7 +359,12 @@ template {
 /*----------------------------------*/
 /* _variables.scss (Global Settings)*/
 /*----------------------------------*/
-/* Fonts: Cormorant Garamond, Nunito Sans, Quattrocento Sans */
+/*
+   Google Fonts - https://fonts.google.com/
+   Fonts: Cormorant Garamond (Regular 400 & Regular 400 Italic, Bold 700 & Bold 700 Italic)
+          Nunito Sans (Regular 400 & Regular 400 Italic, Bold 700)
+          Quattrocento Sans (Regular 400 & Regular 400 Italic, Bold 700)
+*/
 /* Any padding or border that’s applied
    will not be added to the rendered width */
 *, *:before, *:after {
@@ -371,13 +377,16 @@ template {
 /* SCSS Variables */
 /* Global CSS3 Variables */
 :root {
-  --font-family-intro: 'Cormorant Garamond', serif;
-  --font-family--heading:      'Quattrocento Sans', sans-serif;
-  --font-family--body:         'Nunito Sans', sans-serif;
+  --font-family-intro: 'Cormorant Garamond', Georgia, serif;
+  --font-family--heading:      'Quattrocento Sans', Geneva, Tahoma, sans-serif;
+  --font-family--body:         'Nunito Sans', Verdana, sans-serif;
+  --intro-weight-regular:       400;
+  --intro-weight-italic:        400i;
+  --intro-weight-bold:          700;
+  --intro-weight-bold-italic:   700i;
   --heading-weight-regular:     400;
   --heading-weight-italic:      400i;
   --heading-weight-bold:        700;
-  --heading-weight-bold-italic:  700i;
   --body-weight-regular:        400;
   --body-weight-italic:         400i;
   --body-weight-bold:           700;
@@ -420,6 +429,7 @@ body {
   font-weight: var(--body-weight-regular);
   background: #fff;
   color: var(--Body-Text-Color);
+  height: 100vh;
 }
 
 h1, h2, h3 {
@@ -498,6 +508,29 @@ button {
 /*----------------------------------*/
 /* _containers.scss                 */
 /*----------------------------------*/
+body#container {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+section#webdev {
+  background-color: var(--Theme-Color-Dk);
+}
+
 .introduction {
   font-family: var(--font-family-intro);
   font-weight: var(--heading-weight-bold);
@@ -505,27 +538,20 @@ button {
   font-size: 3em;
 }
 
-#webdev {
-  background-color: var(--Theme-Color-Dk);
-}
-
 .sectionhead {
-  font-family: var(--font-family-heading);
+  font-family: var(--font-family--heading);
   font-weight: var(--heading-weight-bold);
   padding: 1em;
   color: var(--Theme-Color-White);
 }
 
+/*----------------------------------*/
+/* _gallery.scss                 */
+/*----------------------------------*/
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 4;
-}
-
-.gallery .pw-full-width {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  width: 50%;
+  grid-template-rows: 3;
 }
 
 .gallery img {
@@ -536,14 +562,43 @@ button {
   display: none;
 }
 
-.pw-full-width img {
-  width: 200%;
+.gallery .doublewidth {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
 }
 
+/*
+.gallery+article.portfolio+doublewidth {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 50%;
+}
+*/
+/*
+.gallery img {
+    width: 100%;
+}
+
+
+
+.gallery figcaption {
+    display: none;
+}
+
+
+.pw-full-width img {
+    width: 200%;
+}
+   
+*/
 /*----------------------------------*/
 /* _header.scss                     */
 /*----------------------------------*/
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,7 +616,7 @@ header {
   background: var(--Theme-Color);
   color: var(--Theme-Color-White);
   padding: 10px 0;
-  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -592,23 +647,23 @@ header {
   }
 }
 
-/* Nav Settings ----------------- */
+/*----------------------------------*/
+/* _navbar.scss                     */
+/*----------------------------------*/
 .main-nav {
   position: absolute;
   top: 100%;
-  right: 0%;
+  width: 100%;
   background: var(--Theme-Color-Grey);
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-in-out;
   transition: max-height 0.2s ease-in-out;
-  z-index: 1;
 }
 
 @media (min-width: 768px) {
   .main-nav {
     position: relative;
-    top: unset;
     right: unset;
     max-height: unset;
     background: transparent;
@@ -725,13 +780,390 @@ header {
 
 /* 
 ==========================================================================
-Layout Styles - 
+Layout Styles - Define layout style for major sections of a page
+                Grid, Sections, Header, footer, sidebar
 ==========================================================================
 */
+/* layout Folder Imports */
+/*----------------------------------*/
+/* _containers.scss                 */
+/*----------------------------------*/
+body#container {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+section#webdev {
+  background-color: var(--Theme-Color-Dk);
+}
+
+.introduction {
+  font-family: var(--font-family-intro);
+  font-weight: var(--heading-weight-bold);
+  font-style: italic;
+  font-size: 3em;
+}
+
+.sectionhead {
+  font-family: var(--font-family--heading);
+  font-weight: var(--heading-weight-bold);
+  padding: 1em;
+  color: var(--Theme-Color-White);
+}
+
+/*----------------------------------*/
+/* _gallery.scss                 */
+/*----------------------------------*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.gallery figcaption {
+  display: none;
+}
+
+.gallery .doublewidth {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+}
+
+/*
+.gallery+article.portfolio+doublewidth {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 50%;
+}
+*/
+/*
+.gallery img {
+    width: 100%;
+}
+
+
+
+.gallery figcaption {
+    display: none;
+}
+
+
+.pw-full-width img {
+    width: 200%;
+}
+   
+*/
+/*----------------------------------*/
+/* _header.scss                     */
+/*----------------------------------*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 55px;
+  background: var(--Theme-Color);
+  color: var(--Theme-Color-White);
+  padding: 10px 0;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 56px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.logo a {
+  color: var(--Theme-Color-White-Lt);
+  text-decoration: none;
+  display: block;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .logo a {
+    padding: 17px 25px;
+  }
+}
+
+/*----------------------------------*/
+/* _navbar.scss                     */
+/*----------------------------------*/
+.main-nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: var(--Theme-Color-Grey);
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    position: relative;
+    right: unset;
+    max-height: unset;
+    background: transparent;
+  }
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.main-nav li {
+  border-bottom: 1px solid var(--Theme-Color-Grey-Md);
+  letter-spacing: 0.0625em;
+}
+
+@media (min-width: 768px) {
+  .main-nav li {
+    border-bottom: none;
+  }
+}
+
+.main-nav:last-child {
+  border-bottom: none;
+}
+
+.main-nav a {
+  color: var(--Theme-Color-White-Lt);
+  text-decoration: none;
+  display: block;
+  padding: 2em 7em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-nav a {
+    margin: 0;
+    padding: 17px;
+  }
+}
+
+.logo a:hover,
+.logo a:focus,
+.main-nav a:hover,
+.main-nav a:focus {
+  background: var(--Theme-Color-Yellow);
+  color: var(--Body-Text-Color);
+}
+
+/* Mobile Nav Settings ----------------- */
+.mobile-nav {
+  padding: 1em;
+  position: absolute;
+  right: .5em;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+.mobile-nav--open {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-nav--open .hamburger::before {
+  opacity: 0;
+}
+
+.mobile-nav--open .hamburger::after {
+  -webkit-transform: translateY(-3px) rotate(-90deg);
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: var(--Theme-Color-White-Lt);
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+
+.hamburger::after {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+}
+
 /* 
 ==========================================================================
-Modules - 
+Modules - Where styles are written for each module as stand-alone, 
+          reusable components
 ==========================================================================
+*/
+/*-------------------------------*/
+/* Module Imports             */
+/*-------------------------------*/
+/*-------------------------------*/
+/*   portfolio.scss              */
+/*-------------------------------*/
+article.portfolio {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.8s ease-out;
+  transition: -webkit-transform 0.8s ease-out;
+  transition: transform 0.8s ease-out;
+  transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
+}
+
+article.portfolio img:hover {
+  cursor: pointer;
+  -webkit-filter: blur(2px) brightness(60%);
+  filter: blur(2px) brightness(60%);
+}
+
+article.portfolio img:hover ~ figcaption {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 45%;
+  text-align: center;
+  color: var(--Theme-Color-White);
+}
+
+.portfolio {
+  overflow: hidden;
+  background-color: var(--Theme-Color-White);
+  border: 1px solid var(--Theme-Color-Black);
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 45%;
+    flex: 1 1 45%;
+    margin: 0.91145833333333%;
+    border: 1px solid var(--Theme-Color-Black);
+  }
+}
+
+.portfolio img {
+  width: 100%;
+  /*	&:hover {
+	    transform: scale(1.02);
+	    transition: transform 0.8s ease-out;
+	} */
+}
+
+/*
+
+.pw-full-width {
+
+    @media (min-width: 768px) {
+        flex: 1 auto;
+        height: 400px;
+    }
+
+    @media (min-width: 1024px) {
+          height: 620px;
+    }
+}
+
+.portfolio-widget img {
+    width: 100%;
+}
+
+.portfolio-widget img:hover {
+    transform: scale(1.02);
+    transition: transform 0.8s ease-out;
+}
+
+
+.portfolio-widget figcaption {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: var(--figCaption-Color);
+    color: var(--Theme-Color-White);
+    text-align: center;
+    padding: 6px;
+    transition: all 0.4s ease-in;
+}
+
+.portfolio-widget:hover figcaption {
+    color: var(--Theme-Color-Black);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--Theme-Color-Yellow);   
+}
+
 */
 
 /*# sourceMappingURL=application.css.map */

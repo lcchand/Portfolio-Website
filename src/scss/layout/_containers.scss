@@ -2,6 +2,41 @@
 /* _containers.scss                 */
 /*----------------------------------*/
 
+
+body#container {
+   // width: 100%;
+   // height: 100%;
+    // CSS Smooth Scroll
+    //overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    
+
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //width: 100%;
+    //height: 70vh;
+    //scroll-snap-align: center;
+   // margin-top: 24vh;
+}
+
+section#intro {
+   // background: url('../assets/pexels-laptop.jpg') no-repeat center;
+    //background-size: cover;
+}
+
+
+section#webdev {
+    background-color: var(--Theme-Color-Dk);
+}
+
+
+
 .introduction {
     font-family: var(--font-family-intro);
     font-weight: var(--heading-weight-bold);
@@ -11,48 +46,11 @@
 
 
 
-#webdev {
-    background-color: var(--Theme-Color-Dk);
-}
-
-
-
 .sectionhead {
-    font-family: var(--font-family-heading);
+    font-family: var(--font-family--heading);
     font-weight: var(--heading-weight-bold);
     padding: 1em;
     color: var(--Theme-Color-White);
+    //background-color: var(--Theme-Color-Dk);
 }
 
-
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 4;
-}
-
-.gallery .pw-full-width {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    width: 50%;
-}
-
-
-
-.gallery img {
-    width: 100%;
-}
-
-
-
-.gallery figcaption {
-    display: none;
-}
-
-
-
-.pw-full-width img {
-    width: 200%;
-}
-    
