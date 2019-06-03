@@ -9,7 +9,8 @@ article.portfolio {
 
     & img:hover {
 	cursor: pointer;
-	filter: blur(2px) brightness(60%);
+	//filter: blur(2px) brightness(60%);
+	filter: blur(2px) brightness(45%);
 
 	&~figcaption {
 	    position: absolute;
@@ -27,7 +28,7 @@ article.portfolio {
 .portfolio {
     overflow: hidden;
     background-color: var(--Theme-Color-White);
-    border: 1px solid var(--Theme-Color-Black);
+    border: 2px solid var(--Theme-Color-Black);
    // margin-bottom: 8%; //
    // position: relative;
 

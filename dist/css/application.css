@@ -406,6 +406,7 @@ template {
   --Body-Text-Color:            #666;
   --figCaption-Color:           rgba(0, 0, 0, 0.9);
   --Overlay:                    rgba(0, 0, 0, 0.5);
+  --Theme-Color-Orange:         #e77a3b;
   --min-width: 320px;
   --max-width: 1440px;
 }
@@ -569,6 +570,10 @@ section#graphic {
   grid-template-rows: repeat(3, auto);
   grid-gap: 5px;
   place-self: stretch;
+}
+
+.gallery img {
+  display: block;
 }
 
 .gallery figcaption {
@@ -876,6 +881,10 @@ section#graphic {
   place-self: stretch;
 }
 
+.gallery img {
+  display: block;
+}
+
 .gallery figcaption {
   display: none;
 }
@@ -1130,8 +1139,8 @@ article.portfolio {
 
 article.portfolio img:hover {
   cursor: pointer;
-  -webkit-filter: blur(2px) brightness(60%);
-  filter: blur(2px) brightness(60%);
+  -webkit-filter: blur(2px) brightness(45%);
+  filter: blur(2px) brightness(45%);
 }
 
 article.portfolio img:hover ~ figcaption {
@@ -1146,7 +1155,7 @@ article.portfolio img:hover ~ figcaption {
 .portfolio {
   overflow: hidden;
   background-color: var(--Theme-Color-White);
-  border: 1px solid var(--Theme-Color-Black);
+  border: 2px solid var(--Theme-Color-Black);
 }
 
 @media (min-width: 768px) {

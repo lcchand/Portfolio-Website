@@ -16,6 +16,8 @@
 
     & img {
 	//width: 100%;
+	// Removes white gap at bottom of image
+	display: block;
     }
 
     & figcaption {
