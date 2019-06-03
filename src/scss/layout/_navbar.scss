@@ -85,7 +85,8 @@
 /* Mobile Nav Settings ----------------- */
 
 .mobile-nav {
-    padding: 1em; //16px
+    // Right=2vw align with  Section h2s
+    padding: 1em 2vw 1em 1em; //16px
     position: absolute;
     right: .5em;//.5em
     cursor: pointer;

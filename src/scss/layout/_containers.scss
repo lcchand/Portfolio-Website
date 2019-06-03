@@ -37,8 +37,17 @@ section#webdev {
     background-color: var(--Theme-Color-Dk);
 }
 
+
+
 section#graphic {
     background-color: var(--Theme-Color-Black);
+}
+
+
+
+section#colophon,
+section#contact {
+    background-color: var(--Theme-Color-White);
 }
 
 
@@ -64,6 +73,14 @@ section#graphic {
 
     &.left {
 	text-align: left;
+    }
+
+    &.center {
+	text-align: center;
+    }
+
+    &.dark {
+	color: var(--Body-Text-Color);
     }
 }
 

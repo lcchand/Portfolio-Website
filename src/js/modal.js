@@ -66,7 +66,7 @@ function openModal(e) {
     detailHTML += `<div>`;
     detailHTML += `<img src="${ detailImage }">`;
     detailHTML += `</div>`;
-    detailHTML += `<div class="gallery-item-info">`;
+    detailHTML += `<div class="galleryItem-info">`;
     detailHTML += `<h3>${ detailName }</h3>`;
     detailHTML += `<h4>Technologies</h4>`;
     detailHTML += `${ arrDetailSkills }`;

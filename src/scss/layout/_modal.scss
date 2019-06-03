@@ -1,0 +1,128 @@
+/*-------------------------------*/
+/*   modal.scss                  */
+/*-------------------------------*/
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index:1;
+    left: 0;
+    top:0;
+    height: 100%;
+    width:100%;
+    overflow: auto;// enable scrool bar if needed
+    background-color: var(--Overlay);
+    animation-name: overlayopen;
+    animation-duration: 0.5s;
+}
+
+
+
+.modal {
+    display: none;
+    background-color: var(--Theme-Color-White);
+    border: 2px solid var(--Theme-Color-Black);
+    color: var(--Theme-Color-Black);
+    width: 90vw; //240px
+    height: 90vh; //75%
+    margin: 0 auto;
+   // padding: .75em;
+    overflow-y: scroll;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+
+    @media #{$brk-tablet} {
+	//width: 512px;
+	border: 3px solid var(--Theme-Color-Black);
+    }
+
+    @media #{$brk-desktop} {
+	//width: 684px;
+    }
+}
+
+.modal img {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--Theme-Color-Black);   
+}
+
+
+
+.modal h3 {
+    color: var(--Theme-Color);
+    padding-bottom: 0.5em;
+    font-size: 1.25em;
+
+     @media #{$brk-tablet} {
+	 font-size: 1.5em;
+    }
+    
+}
+
+
+.modal h4 {
+    color: var(--Theme-Color-Grey);
+}
+
+
+.modal ul {
+    font-size: 0.9em;
+    padding-left: 0.25em;
+    padding-bottom: 1em;
+    list-style: square inside;
+    color: var(--Theme-Color);
+}
+
+
+
+.modal p {
+    font-size: 0.9em;
+    padding: 0 .25em 0 .25em;
+ 
+    @media #{$brk-tablet} {
+	padding: 0 1.2em 0 1.2em;
+    }
+
+     @media #{$brk-desktop} {
+	padding: 0 1.25em 0 1.25em;
+    }
+}
+
+.modal p:first-line {
+    font-weight: var(--body-weight-bold);
+}
+
+.modalSite {
+    margin: 2em 0 1.5em 0;
+}
+
+.modalSite a {
+    text-decoration: none;
+    padding: 1em 1em 1em 1em;
+    background: var(--Theme-Color);
+    color: var(--Theme-Color-White);
+}
+
+.modalSite a:hover {
+    background: var(--Theme-Color-Yellow);
+    color: var(--Theme-Color-Black);
+}
+	       
+
+
+.galleryItem-info {
+    padding: 10px;
+
+    @media #{$brk-tablet} {
+	padding: 20px;
+    }
+}
+
+
+@keyframes overlayopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
