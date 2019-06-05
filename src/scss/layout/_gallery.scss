@@ -6,68 +6,6 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 8 columns */
-    //grid-template-columns: 10px repeat(6, 1fr) 10px;
-   // grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-gap: 5px;
-    //place-self: stretch;
-
-/*
-    & img {
-	//width: 100%;
-	// Removes white gap at bottom of image
-	display: block;
-    }
-*/
-/*    & figcaption {
-	display: none;
-    }*/
 }
-
-
-//article.portfolio {
-
-/*    &:nth-child(2n+1) {
-	grid-column-start: 2;
-	grid-column-end: 5;
-    }
-
-    &:nth-child(2n) {
-	grid-column-start: 5;
-	grid-column-end: 8;
-    }
-
-    &.doublewidth {
-	grid-column-start: 1;
-	grid-column-end: 3;
-	//width: 100%;
-    }
-}
-*/
-
-/*
-.gallery+article.portfolio+doublewidth {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    width: 50%;
-}
-*/
-
-/*
-.gallery img {
-    width: 100%;
-}
-
-
-
-.gallery figcaption {
-    display: none;
-}
-
-
-.pw-full-width img {
-    width: 200%;
-}
-   
-*/

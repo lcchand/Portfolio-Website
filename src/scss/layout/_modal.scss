@@ -1,6 +1,7 @@
-/*-------------------------------*/
-/*   modal.scss                  */
-/*-------------------------------*/
+/* ========================================================================== */
+/* _modal.scss                                                                */
+/* ========================================================================== */
+
 
 .overlay {
     display: none;
@@ -81,23 +82,48 @@
 .modal p {
     font-size: 0.9em;
     padding: 0 .25em 0 .25em;
- 
+    
     @media #{$brk-tablet} {
 	padding: 0 1.2em 0 1.2em;
     }
 
-     @media #{$brk-desktop} {
+    @media #{$brk-desktop} {
 	padding: 0 1.25em 0 1.25em;
     }
+
+    &::first-line {
+	font-weight: var(--body-weight-bold);
+    }  
 }
 
+/*
 .modal p:first-line {
     font-weight: var(--body-weight-bold);
 }
+*/
 
 .modalSite {
     margin: 2em 0 1.5em 0;
+
+    a {
+	text-decoration: none;
+	padding: 1em 1em 1em 1em;
+	background: var(--Theme-Color);
+	color: var(--Theme-Color-White);
+
+	&:hover {
+	    background: var(--Theme-Color-Yellow);
+	    color: var(--Theme-Color-Black);
+	}
+    }   
 }
+
+
+
+
+
+
+/*
 
 .modalSite a {
     text-decoration: none;
@@ -110,7 +136,7 @@
     background: var(--Theme-Color-Yellow);
     color: var(--Theme-Color-Black);
 }
-	       
+*/	       
 
 
 .galleryItem-info {

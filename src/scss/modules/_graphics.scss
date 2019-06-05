@@ -1,6 +1,6 @@
-/*-------------------------------*/
-/*   graphics.scss               */
-/*-------------------------------*/
+/* ========================================================================== */
+/*   graphics.scss                                                            */
+/* ========================================================================== */
 
 .graphic-project {
     overflow: hidden;
@@ -13,34 +13,60 @@
         flex: 1 1 45%;
         margin: 0 2.5% 2.5% 2.5%; 
     }
-   
+
+    h1 {
+	color: var(--Theme-Color-Red);
+    }
+
+    img {
+	width: 100%;
+	border: 1px solid var(--Theme-Color-Grey);
+    }
+    
 }
 
+
+
+
+
+/*
 .graphic-project img {
   width: 100%;
   border: 1px solid var(--Theme-Color-Grey);
 }
 
+
 .graphic-project h1 {
     color: var(--Theme-Color-Red);
 }
+*/
 
 .graphic-info {
     margin-bottom: 1em;
     align-self: flex-start;
 }
 
+
+
 .graphic-skills {
     margin-bottom: 1em;
     align-self: flex-start;
 
-     @media #{$brk-tablet} {
+    @media #{$brk-tablet} {
 	align-self: flex-start;
-     }
+    }
+
+    ul {
+	padding-left: 0.25em;
+	list-style: square inside;
+	color: var(--Theme-Color);
+    }
 }
 
+/*
 .graphic-skills  ul {
     padding-left: 0.25em;
     list-style: square inside;
     color: var(--Theme-Color);
 }
+*/
