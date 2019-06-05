@@ -13,20 +13,20 @@
     grid-gap: 5px;
     //place-self: stretch;
 
-
+/*
     & img {
 	//width: 100%;
 	// Removes white gap at bottom of image
 	display: block;
     }
-
-    & figcaption {
+*/
+/*    & figcaption {
 	display: none;
-    }
+    }*/
 }
 
 
-article.portfolio {
+//article.portfolio {
 
 /*    &:nth-child(2n+1) {
 	grid-column-start: 2;
@@ -37,13 +37,14 @@ article.portfolio {
 	grid-column-start: 5;
 	grid-column-end: 8;
     }
-*/
+
     &.doublewidth {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	//width: 100%;
     }
 }
+*/
 
 /*
 .gallery+article.portfolio+doublewidth {

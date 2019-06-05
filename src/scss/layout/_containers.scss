@@ -46,7 +46,8 @@ section#graphic {
 
 
 section#colophon,
-section#contact {
+section#contact,
+section#intro {
     background-color: var(--Theme-Color-White);
 }
 
@@ -61,7 +62,7 @@ section#contact {
 
 
 
-.sectionhead {
+.section_head {
     font-family: var(--font-family--heading);
     font-weight: var(--heading-weight-bold);
     padding: 1em 0;
@@ -70,17 +71,6 @@ section#contact {
     text-align: right;
     //grid-column-end: 3;
     //grid-column: span 2;
-
-    &.left {
-	text-align: left;
-    }
-
-    &.center {
-	text-align: center;
-    }
-
-    &.dark {
-	color: var(--Body-Text-Color);
-    }
 }
+
 

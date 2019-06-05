@@ -1,15 +1,6 @@
 /* Global Imports   */
 
 
-
-/* 
-==========================================================================
-Utilities - 
-==========================================================================
-*/
-
-//@import "utilities/index";
-
 /* 
 ==========================================================================
 Base Styles - Defines what elements look like by default
@@ -18,7 +9,8 @@ Base Styles - Defines what elements look like by default
 */
 
 @import "base/index";
-@import "layout/index";
+
+
 
 /* 
 ==========================================================================
@@ -30,6 +22,7 @@ Layout Styles - Define layout style for major sections of a page
 @import "layout/index";
 
 
+
 /* 
 ==========================================================================
 Modules - Where styles are written for each module as stand-alone, 
@@ -39,3 +32,12 @@ Modules - Where styles are written for each module as stand-alone,
 
 @import "modules/index";
 
+
+
+/* 
+==========================================================================
+Utilities - Minor modifiers: alignment, color, etc
+==========================================================================
+*/
+
+@import "utilities/index";
