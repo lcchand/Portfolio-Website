@@ -507,9 +507,9 @@ button {
 /*                 Grid, Sections, Header, footer, sidebar                    */
 /* ========================================================================== */
 /* layout Folder Imports */
-/*----------------------------------*/
-/* _containers.scss                 */
-/*----------------------------------*/
+/* ========================================================================== */
+/* _containers.scss                                                          */
+/* ========================================================================== */
 body#container {
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
@@ -528,6 +528,13 @@ section {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 8vh 4vw;
+  background-color: var(--Theme-Color-White);
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 10vh 6vw;
+  }
 }
 
 section#intro {
@@ -542,10 +549,8 @@ section#graphic {
   background-color: var(--Theme-Color-Black);
 }
 
-section#colophon,
-section#contact,
-section#intro {
-  background-color: var(--Theme-Color-White);
+section#about {
+  background-color: var(--Theme-Color-Dk-Grey);
 }
 
 .introduction {
@@ -563,9 +568,9 @@ section#intro {
   text-align: right;
 }
 
-/*----------------------------------*/
-/* _gallery.scss                 */
-/*----------------------------------*/
+/* ========================================================================== */
+/* _gallery.scss                                                              */
+/* ========================================================================== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -792,21 +797,6 @@ header {
   color: var(--Theme-Color);
 }
 
-/*
-.bio-avatar p {
-    grid-column: 1/3;
-    margin-bottom: 1em;
-}
-
-.bio-avatar img {
-    grid-column: 1/3;
-    width: 38%;
-    border: 2px solid var(--Theme-Color-White);
-    border-radius: 50%;
-    justify-self: center;
-    margin-bottom: 1em;
-}
-*/
 /* ========================================================================== */
 /* _modal.scss                                                                */
 /* ========================================================================== */
@@ -969,9 +959,9 @@ header {
   }
 }
 
-/*-------------------------------*/
-/*   footer.scss                 */
-/*-------------------------------*/
+/* ========================================================================== */
+/*   footer.scss                                                              */
+/* ========================================================================== */
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -997,12 +987,13 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    padding: 0 4vw;
   }
 }
 
 @media (min-width: 1440px) {
   footer {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -1058,43 +1049,26 @@ footer {
   }
 }
 
-.social-icons li li:first-child {
+.social-icons li:first-child {
   margin-left: 0;
 }
 
 @media (min-width: 1024px) {
-  .social-icons li li:first-child {
+  .social-icons li:first-child {
     margin-left: 0;
   }
 }
 
-.social-icons li li:last-child {
+.social-icons li:last-child {
   margin-right: 0;
 }
 
 @media (min-width: 1024px) {
-  .social-icons li li:last-child {
+  .social-icons li:last-child {
     margin-right: 0;
   }
 }
 
-/*
-.social-icons li:first-child {
-    margin-left: 0;
-
-    @media (min-width: 1024px) {
-	margin-left: 0;
-    }
-}
-
-.social-icons li:last-child {
-    	margin-right: 0;
-
-    @media (min-width: 1024px) {
-	margin-right: 0;
-    }
-}
-*/
 .social-icons a {
   display: block;
   margin: 0;
@@ -1108,7 +1082,7 @@ footer {
   padding: 10px;
 }
 
-.social-icons svg:hover, .social-icons svg :focus {
+.social-icons svg:hover, .social-icons svg:focus {
   fill: var(--Theme-Color-Grey-Dk);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -1116,14 +1090,6 @@ footer {
   transition: 0.3s ease-in-out;
 }
 
-/*
-.social-icons svg:hover,
-.social-icons svg:focus {
-    fill: var(--Theme-Color-Grey-Dk);
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-}
-*/
 .copyright {
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1152,9 +1118,9 @@ footer {
 /* ========================================================================== */
 /* _Module Imports                                                            */
 /* ========================================================================== */
-/*-------------------------------*/
-/*   portfolio.scss              */
-/*-------------------------------*/
+/* ========================================================================== */
+/*   portfolio.scss                                                           */
+/* ========================================================================== */
 .portfolio {
   overflow: hidden;
   background-color: var(--Theme-Color-White);

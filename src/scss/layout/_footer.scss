@@ -1,6 +1,6 @@
-/*-------------------------------*/
-/*   footer.scss                 */
-/*-------------------------------*/
+/* ========================================================================== */
+/*   footer.scss                                                              */
+/* ========================================================================== */
 
 
 footer {
@@ -14,10 +14,11 @@ footer {
 	margin: 0 auto;
 	flex-direction: row;
 	justify-content: center;
+	padding: 0 4vw;
     }
 
     @media #{$brk-max} {
-	width: 70%;
+	width: 100%;//70%
     }
     
 }
@@ -28,39 +29,39 @@ footer {
     list-style: none;
     padding: 0;
     text-decoration: none;
-}
 
-.social-icons ul {
-    margin: 0 5% 0 5%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    ul {
+	margin: 0 5% 0 5%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 
 
-    @media #{$brk-desktop} {
-	align-items: unset;
-	justify-content: unset;
-	margin: 0;
-	margin-right: auto;
-    }
-}
-
-.social-icons li {
-    // margin: 0 5%;
-    margin: 0 4%;
-
-    @media #{$brk-tablet} {
-	//margin: 0 25% 0 25%;
-	margin: 0 20% 0 20%;
+	@media #{$brk-desktop} {
+	    align-items: unset;
+	    justify-content: unset;
+	    margin: 0;
+	    margin-right: auto;
+	}
     }
 
-    @media #{$brk-desktop} {
-	//margin: 0 15% 0 15%;
-	margin: 0 8% 0 8%;
+    li {
+	// margin: 0 5%;
+	margin: 0 4%;
+
+	@media #{$brk-tablet} {
+	    //margin: 0 25% 0 25%;
+	    margin: 0 20% 0 20%;
+	}
+
+	@media #{$brk-desktop} {
+	    //margin: 0 15% 0 15%;
+	    margin: 0 8% 0 8%;
+	}
     }
 
-    & li:first-child {
+    li:first-child {
 	margin-left: 0;
 
 	@media #{$brk-desktop} {
@@ -68,7 +69,7 @@ footer {
 	}
     }
 
-    & li:last-child {
+    li:last-child {
     	margin-right: 0;
 
 	@media #{$brk-desktop} {
@@ -77,23 +78,8 @@ footer {
     }
 }
 
-/*
-.social-icons li:first-child {
-    margin-left: 0;
 
-    @media #{$brk-desktop} {
-	margin-left: 0;
-    }
-}
-
-.social-icons li:last-child {
-    	margin-right: 0;
-
-    @media #{$brk-desktop} {
-	margin-right: 0;
-    }
-}
-*/
+// Icons for Github,Twitter, etc.
 .social-icons a {
     display: block;
     margin: 0;
@@ -109,21 +95,15 @@ footer {
     height: 50px;
     padding: 10px;
 
-    &:hover, :focus {
+    &:hover, &:focus {
 	fill: var(--Theme-Color-Grey-Dk);
 	transform: scale(1.1);
 	transition: 0.3s ease-in-out;
     }
 }
 
-/*
-.social-icons svg:hover,
-.social-icons svg:focus {
-    fill: var(--Theme-Color-Grey-Dk);
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-}
-*/
+
+
 .copyright {
     letter-spacing: 1px;
     text-transform: uppercase;
