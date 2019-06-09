@@ -647,7 +647,7 @@ header {
   transition: max-height 0.2s ease-in-out;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .main-nav {
     position: relative;
     right: unset;
@@ -721,7 +721,7 @@ header {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .mobile-nav {
     display: none;
   }
@@ -785,6 +785,12 @@ header {
   border-radius: 50%;
   justify-self: center;
   margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  .bio-avatar img {
+    width: 20%;
+  }
 }
 
 .bio-skills h3 {
