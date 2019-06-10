@@ -19,7 +19,7 @@ function menuToggle() {
 	// Calculate the maxHeight of Nav contents
 	// assign it to style which will display Nav as drop down menu
 	mainNav.style.maxHeight = mainNav.scrollHeight + "px";
-	mainNav.style.width = "calc(100vw)";
+	//mainNav.style.width = "calc(100vw)";
     }
 
 };

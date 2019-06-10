@@ -602,6 +602,8 @@ header {
   background: var(--Theme-Color);
   color: var(--Theme-Color-White);
   padding: 10px 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   z-index: 1;
 }
 
@@ -633,6 +635,13 @@ header {
   }
 }
 
+@media (min-width: 1024px) {
+  .logo a {
+    width: 350px;
+    padding: 17px 60px;
+  }
+}
+
 /* ========================================================================== */
 /* _navbar.scss                                                               */
 /* ========================================================================== */
@@ -642,6 +651,7 @@ header {
   width: 100%;
   background: var(--Theme-Color-Grey);
   max-height: 0;
+  width: calc(100vw);
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-in-out;
   transition: max-height 0.2s ease-in-out;
@@ -650,6 +660,7 @@ header {
 @media (min-width: 1024px) {
   .main-nav {
     position: relative;
+    top: 0;
     right: unset;
     max-height: unset;
     background: transparent;
@@ -667,6 +678,15 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -679,7 +699,7 @@ header {
   letter-spacing: 0.0625em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .main-nav li {
     border-bottom: none;
   }
