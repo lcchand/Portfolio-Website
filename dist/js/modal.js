@@ -64,14 +64,14 @@ function openModal(e) {
     // Assemble HTML elements for popup modal
     detailHTML += `<figure id="galleryItem">`;
     detailHTML += `<div>`;
-    detailHTML += `<img src="${ detailImage }">`;
+    detailHTML += `<img class="modal_img" src="${ detailImage }">`;
     detailHTML += `</div>`;
-    detailHTML += `<div class="galleryItem-info">`;
-    detailHTML += `<h3>${ detailName }</h3>`;
-    detailHTML += `<h4>Technologies</h4>`;
+    detailHTML += `<div class="galleryItem_info">`;
+    detailHTML += `<h3 class="modal_h3">${ detailName }</h3>`;
+    detailHTML += `<h4 class="modal_h4">Technologies</h4>`;
     detailHTML += `${ arrDetailSkills }`;
-    detailHTML += `<p>${ detailDesc }</p>`;
-    detailHTML += `<p class="modalSite"><a href=${ detailPath }>Proceed to Site</a></p>`;
+    detailHTML += `<p class="modal_p">${ detailDesc }</p>`;
+    detailHTML += `<p class="modalSite"><a class="modalSite_a" href=${ detailPath }>Proceed to Site</a></p>`;
     detailHTML += `</div>`;
 
     detailHTML += `</figure>`;
@@ -87,7 +87,13 @@ function openModal(e) {
     overlayElement.style.display = 'flex';
     // display modal
     modalElement.style.display = 'block';
+
 }
+
+// Select a href just created from modal
+let modalSiteHref = document.querySelector(".modalSite_a");
+
+
 
 /* --- Functions --- */
 
@@ -104,9 +110,9 @@ function closeModal() {
 
 
 
-// call function: closeModal - if Click event is outside of Modal
+// call function: closeModal - if Click event is outside of modalSitehref
 function outsideModal(e) {
-    if(e.target !== modalElement) {
+    if(e.target !== modalSiteHref) {//modalElement
 	closeModal();
     }
 }
@@ -115,10 +121,10 @@ function outsideModal(e) {
 // Creates an array from comma delimited attribute: data-skills
 // and returns html for <li> elements
 function listSkills(skills) {
-    skillsUsed ='<ul>';
+    skillsUsed ='<ul class="modal_ul">';
     let arr = skills.split(",");
     for (let i = 0; i < arr.length; i++) {
-	skillsUsed += '<li>' + arr[i].trim() + '</li>';
+	skillsUsed += '<li class="modal_li">' + arr[i].trim() + '</li>';
     }
     skillsUsed += '</ul>';
     return(skillsUsed);

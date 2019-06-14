@@ -3,7 +3,7 @@
 /* ========================================================================== */
 
 
-.main-nav {
+.main_nav {
     position: absolute;
     //top: 55px;
     top: 100%;
@@ -31,7 +31,7 @@
 
 
 
-.main-nav ul {
+.main_nav ul {
     margin: 0;
     padding: 0;
     //padding: 2em 7em;
@@ -48,7 +48,7 @@
     }
 }
 
-.main-nav li {
+.main_nav li {
     border-bottom: 1px solid var(--Theme-Color-Grey-Md);
     letter-spacing: 0.0625em;
 
@@ -58,11 +58,11 @@
     }
 }
 
-.main-nav:last-child {
+.main_nav:last-child {
     border-bottom: none;
 }
 
-.main-nav a {
+.main_nav a {
   color: var(--Theme-Color-White-Lt);
   text-decoration: none;
   display: block;
@@ -83,8 +83,8 @@
 // Hover State for Navigation
 .logo a:hover,
 .logo a:focus,
-.main-nav a:hover,
-.main-nav a:focus {
+.main_nav a:hover,
+.main_nav a:focus {
     background: var(--Theme-Color-Yellow);
     color: var(--Body-Text-Color);
 }
@@ -95,7 +95,7 @@
 
 /* Mobile Nav Settings ----------------- */
 
-.mobile-nav {
+.mobile_nav {
     // Right=2vw align with  Section h2s
     padding: 1em 2vw 1em 1em; //16px
     position: absolute;
@@ -111,15 +111,15 @@
 
 
 // Hamburger Animation
-.mobile-nav--open {
+.mobile_nav--open {
     transform: rotate(45deg);
 }
 
-.mobile-nav--open .hamburger::before {
+.mobile_nav--open .hamburger::before {
     opacity: 0;
 }
 
-.mobile-nav--open .hamburger::after {
+.mobile_nav--open .hamburger::after {
     transform: translateY(-3px) rotate(-90deg);
 }
 

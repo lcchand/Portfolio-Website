@@ -11,12 +11,12 @@
     position: relative;
     transition: transform 0.8s ease-out;
 
-    figcaption {
+    &_figcaption {
 	display: none;
     }
     
 
-    img {
+    &_img {
 	display: block;
 	width: 100%;
 

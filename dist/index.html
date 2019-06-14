@@ -6,7 +6,7 @@
     <link href="css/application.css" rel="stylesheet" type="text/css"/>
     <title>Lance Chandler - Portfolio Version 2.0</title>
   </head>
-  <body id="container">
+  <body id="container" class="body--container">
     
     <!-- SVG Sprite Map -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -37,7 +37,7 @@
     <header role="banner">
       <h1 class="logo"><a href="index.html">Lance Chandler</a></h1>
 
-      <nav id="main-nav" class="main-nav" role="navigation">
+      <nav id="main-nav" class="main_nav" role="navigation">
 	<ul>
 	  <li><a href="#webdev">Web Development</a></li>
 	  <li><a href="#graphic">Graphics</a></li>
@@ -46,7 +46,7 @@
 	  <li><a href="#contact">Contact</a></li>
 	</ul>
       </nav>
-      <div id="mobilenav" class="mobile-nav">
+      <div id="mobilenav" class="mobile_nav">
 	<div class="hamburger"></div>
       </div>
     </header>
@@ -54,13 +54,13 @@
     <main role="main">
       
       <!-- Intro Section Screen -->
-      <section id="intro">
+      <section id="intro" class="section section--intro">
 	<h1 class="introduction">I'm Lance</h1>
 	<h3>A front-end web developer based in Virginia</h3>
       </section>
 
       <!--Web Development Section Screen-->
-      <section id="webdev">
+      <section id="webdev" class="section section--webdev">
 	
 	<h2  class="section_head">Web Development</h2>
 	<div class="gallery">
@@ -68,59 +68,59 @@
 	  
 	  <article class="portfolio portfolio--doublewidth" data-name="Data Center Intranet" data-path="site-datacenter/index.html"  data-skills="CSS3 Variables, Sass, Javascript, Jekyll - Static Site Generator" data-desc="Provided a Working concept Intranet for a Regional Hospital's Data Center. Duties of the Computer Operations Center are to ensure 24/7 Operations of Facility, Monitor & trouble shoot internal Software Systems, and provide support for external systems. Existing support documentation is located in multiple format documents (Spreadsheets, MS Word, PDF), various locations and hard copy. My solution was to organize the Information Architecture into 3 Main categories: Building, Support and Systems. Color coding and file naming standards were developed to reinforce User Navigation. An accordion style sidebar was used to simplify the interface. Content pages consist of a 3 tab interface for Issues, Application Support Groups and Reference documentation related to current topic.">
 	    <figure>
-	      <img alt="Exterior Photo of Data Center" src="assets/Sentara-768.jpg"
+	      <img class="portfolio_img" alt="Exterior Photo of Data Center" src="assets/Sentara-768.jpg"
 		   srcset="assets/Sentara-320-new.jpg 320w,
-			assets/Sentara-768.jpg 768w,
-			assets/Sentara-1024.jpg 1024w"
+			  assets/Sentara-768.jpg 768w,
+			  assets/Sentara-1024.jpg 1024w"
 		   sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Data Center Intranet for Regional Hospital Chain</figcaption>
+	      <figcaption class="portfolio_figcaption">Data Center Intranet for Regional Hospital Chain</figcaption>
 	    </figure>
 	  </article>
 	  
 	  <article class="portfolio" data-name="Photo Gallery" data-path="site-photos/index.html"  data-skills="HTML5, Javascript, JQuery" data-desc="Interactive photo gallery using JavaScript and jQuery. Thumbnails and photos were provided with descriptions. Top of the page has a search area where photos will hide and show depending on user input. When the user clicks on a thumbnail the photo will display in a lightbox. There are back and previous buttons to cycle through photos.">
 	    <figure>
-	      <img alt="Thumbnail Photo Images with Search Form interface at the top of screen" src="assets/Gallery-768.jpg" 
+	      <img class="portfolio_img" alt="Thumbnail Photo Images with Search Form interface at the top of screen" src="assets/Gallery-768.jpg" 
 		   srcset="assets/Gallery-320.jpg 320w,
-			assets/Gallery-768.jpg 768w,
-			assets/Gallery-1024.jpg 1024w"
+			  assets/Gallery-768.jpg 768w,
+			  assets/Gallery-1024.jpg 1024w"
 		   sizes="(max-width: 320px) 320px,
-			(max-width: 768px) 768px,
-			(max-width: 1024px) 1024px,
-			768px">
-	      <figcaption>Photo Gallery</figcaption>
+			  (max-width: 768px) 768px,
+			  (max-width: 1024px) 1024px,
+			  768px">
+	      <figcaption class="portfolio_figcaption">Photo Gallery</figcaption>
 	    </figure>
 	  </article>
 	  
 	  <article class="portfolio" data-name="Interactive Video Player" data-path="site-video/index.html"  data-skills="HTML5, Sass, Javascript" data-desc="Requrements for this project, build an HTML5 video player using JavaScript and the HTML5 Video API. Using the supplied mockups, video files, and transcript, build an interactive video player that synchronizes the video and the transcript. The transcript should be placed below the video, and should highlight as the video progresses.">
 	    <figure>
-	      <img alt="Exterior Photo of Data Center"  src="assets/Video-768.jpg"
+	      <img class="portfolio_img" alt="Exterior Photo of Data Center"  src="assets/Video-768.jpg"
 		   srcset="assets/Video-320.jpg 320w,
-			assets/Video-768.jpg 768w,
-			assets/Video-1024.jpg 1024w"
+			  assets/Video-768.jpg 768w,
+			  assets/Video-1024.jpg 1024w"
 		   sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Interactive Video Player</figcaption>
+	      <figcaption class="portfolio_figcaption">Interactive Video Player</figcaption>
 	    </figure>
 	  </article>
 	  
 	  <article class="portfolio" data-name="Web Dashboard" data-path="site-dashboard/index.html" data-skills="HTML5, Sass, Javascript, Chart.js Library" data-desc="Web dashboard complete with JavaScript-driven charts and graphs. Using the supplied Mock Up, created the HTML, CSS and JavaScript functionality for this one page -- no further requirements needed to create other pages, or build any backend or database functionality.">
 	    <figure>
-	      <img alt="Digital Dashboard of Web Site Statistics" src="assets/Dashboard-768.jpg"
+	      <img class="portfolio_img" alt="Digital Dashboard of Web Site Statistics" src="assets/Dashboard-768.jpg"
 		   srcset="assets/Dashboard-320.jpg 320w,
-			assets/Dashboard-768.jpg 768w,
-			assets/Dashboard-1024.jpg 1024w"
+			  assets/Dashboard-768.jpg 768w,
+			  assets/Dashboard-1024.jpg 1024w"
 		   sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Web Dashboard</figcaption>
+	      <figcaption class="portfolio_figcaption">Web Dashboard</figcaption>
 	    </figure>
 	  </article>
 	  
 	  <article class="portfolio" data-name="Employee Directory" data-path="site-employee/index.html" data-skills="HTML5, Sass, Javascript & jQuery, Rest, AJAX API" data-desc="Starting with the Public Random User Generator API (https://randomuser.me/) to grab information for 12 random employees, and use that data to build a prototype for an Awesome Startup employee directory. Requesting a JSON object from the API and parse the data so that 12 employees are listed in a grid with their thumbnail image, full name, email, and location. Clicking the employee’s image or name will open a modal window with more detailed information, such as the employee’s birthday and address.">
 	    <figure>
-	      <img alt="Employee Directory with Photos and Contact information"  src="assets/Employee-768.jpg"
-			srcset="assets/Employee-320.jpg 320w,
-			assets/Employee-768.jpg 768w,
-			assets/Employee-1024.jpg 1024w"
+	      <img class="portfolio_img" alt="Employee Directory with Photos and Contact information"  src="assets/Employee-768.jpg"
+		   srcset="assets/Employee-320.jpg 320w,
+			  assets/Employee-768.jpg 768w,
+			  assets/Employee-1024.jpg 1024w"
 		   sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Employee Directory</figcaption>
+	      <figcaption class="portfolio_figcaption">Employee Directory</figcaption>
 	    </figure>
 	  </article>
 	  
@@ -132,51 +132,51 @@
 
 
       <!-- Graphics Section Screen-->
-      <section id="graphic" class="GraphicDesign">
+      <section id="graphic" class="section section--graphic GraphicDesign">
 	<h2  class="section_head left">Graphic Design</h2>
 	<div class="gallery">
 
 	  <article class="portfolio" data-name="Poster Design" data-path="graphics.html#poster"  data-skills="Adobe Indesign, Adobe Photoshop" data-desc="Using professionally supplied photographs and Business development copy, posters were executed using Adobe Creative suite and printed in-house using a large format printer. Featured projects were displayed throughout local office for clients and employees.">
 	    <figure>
-	      <img alt="Architectural Project Poster of Hampton Roads Convention Center" src="assets/GD-Project-Poster.jpg"
+	      <img class="portfolio_img" alt="Architectural Project Poster of Hampton Roads Convention Center" src="assets/GD-Project-Poster.jpg"
 		   srcset="assets/GD-Project-Poster-320.jpg 320w,
-			assets/GD-Project-Poster-768.jpg 768w,
-			assets/GD-Project-Poster-1024.jpg 1024w"
+			  assets/GD-Project-Poster-768.jpg 768w,
+			  assets/GD-Project-Poster-1024.jpg 1024w"
 		   sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Poster</figcaption>
+	      <figcaption class="portfolio_figcaption">Poster</figcaption>
 	    </figure>
 	  </article>
 
 	  <article class="portfolio" data-name="Facility Development Plan Covers" data-path="graphics.html#document"  data-skills="Adobe Indesign, Adobe Photoshop" data-desc="Comprehensive Facility Developement Plan Design concept covers for the Smithsonian National Museum of Natural History.">
 	    <figure>
-	      <img  alt="Report Covers for the Smithsonian Natural Museum of Natural History" src="assets/GD-Smithsonian.jpg"
-		    srcset="assets/GD-Smithsonian-320.jpg 320w,
-			 assets/GD-Smithsonian-768.jpg 768w,
-			 assets/GD-Smithsonian-1024.jpg 1024w"
-		    sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Document</figcaption>
+	      <img class="portfolio_img"  alt="Report Covers for the Smithsonian Natural Museum of Natural History" src="assets/GD-Smithsonian.jpg"
+		   srcset="assets/GD-Smithsonian-320.jpg 320w,
+			  assets/GD-Smithsonian-768.jpg 768w,
+			  assets/GD-Smithsonian-1024.jpg 1024w"
+		   sizes="(max-width: 1024px) 1024px, 768px">
+	      <figcaption class="portfolio_figcaption">Document</figcaption>
 	    </figure>
 	  </article>
 
 	  <article class="portfolio" data-name="3D Concept Rendering" data-path="graphics.html#concept" data-skills="Autodesk Autocad, Google Sketchup, Adobe Photoshop, Adobe Indesign" data-desc="3D Architectual rendering of proposed Hotel. Created 3D model from 2D Autocad drawings using Google Sketchup Pro. Exported views from model were composited & stylized in Photoshop. The final Design Proposal document was completed in Adobe Indesign.">
 	    <figure>
-	      <img alt="Concept Rendering of Proposed Hotel" src="assets/GD-Hilton-Rendering.jpg"
+	      <img class="portfolio_img" alt="Concept Rendering of Proposed Hotel" src="assets/GD-Hilton-Rendering.jpg"
 		   srcset="assets/GD-Hilton-320.jpg 320w,
-			assets/GD-Hilton-768.jpg 768w,
-			assets/GD-Hilton-1024.jpg 1024w"
+			  assets/GD-Hilton-768.jpg 768w,
+			  assets/GD-Hilton-1024.jpg 1024w"
 		   sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Concept Rendering</figcaption>
+	      <figcaption class="portfolio_figcaption">Concept Rendering</figcaption>
 	    </figure>
 	  </article>
 	  
 	  <article class="portfolio" data-name="Visualization Rendering" data-path="graphics.html#visualization"  data-skills="Autodesk Autocad, Google Sketchup Pro, RenderIn, Adobe Photoshop, Adobe Indesign" data-desc="3D Architectual Visualization of proposed Municipal Building. Created 3D model from 2D Autocad drawings using Google Sketchup Pro. Visualization rendering was executed using RenderIn and further enhancments completed in Photoshop. The final large format presentation board was executed in Adobe Indesign.">
 	    <figure>
-	      <img alt="Realistic rendering of interior lobby for Municipal building" src="assets/GD-Suffolk-Rendering.jpg"
+	      <img class="portfolio_img" alt="Realistic rendering of interior lobby for Municipal building" src="assets/GD-Suffolk-Rendering.jpg"
 		   srcset="assets/GD-Suffolk-320.jpg 320w,
-			assets/GD-Suffolk-768.jpg 768w,
-			assets/GD-Suffolk-1024.jpg 1024w"
+			  assets/GD-Suffolk-768.jpg 768w,
+			  assets/GD-Suffolk-1024.jpg 1024w"
 		   sizes="(max-width: 1024px) 1024px, 768px">
-	      <figcaption>Visualization</figcaption>
+	      <figcaption class="portfolio_figcaption">Visualization</figcaption>
 	    </figure>
 	  </article>
 
@@ -188,7 +188,7 @@
 
       
       <!-- Colophon Section Screen-->
-      <section id="colophon">
+      <section id="colophon" class="section">
 	<h2 class="section_head dark-grey">Colophon</h2>
 	<p>Blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis, bibendum ut tristique et, egestas quis ipsum suspendisse ultrices? Aliquet nibh praesent tristique magna sit amet purus gravida quis!</p>
       </section>
@@ -197,38 +197,38 @@
 
       
       <!-- About Section Screen-->
-      <section id="about">
+      <section id="about" class="section section--about">
 	<h2 class="section_head">About</h2>
-	<div class="bio-avatar">
+	<div class="about">
 	  <!-- <div class="bio"> -->
 
-	  <img src="assets/Lance-Chandler.jpg" alt="Photo of Lance Chandler"/>
+	  <img src="assets/Lance-Chandler.jpg" class="about_img" alt="Photo of Lance Chandler"/>
 
-	  <p>Hi! I'm a creative front-end developer and am excited to put all my skills to use! Recently, I finished a degree in front-end web development at Treehouse. I have over 10 years experience as a dedicated professional working on national and international projects with a commitment to high quality in Graphic Design, Illustration and Multimedia.</p>
+	  <p class="about_p">Hi! I'm a creative front-end developer and am excited to put all my skills to use! Recently, I finished a degree in front-end web development at Treehouse. I have over 10 years experience as a dedicated professional working on national and international projects with a commitment to high quality in Graphic Design, Illustration and Multimedia.</p>
     
-	    <div class="bio-skills">
-	      <h3>Development</h3>
+	    <div class="aboutskills">
+	      <h3 class="aboutskills_h3">Development</h3>
 	      <ul>
-		<li>HTML5</li>
-		<li>CSS3</li>
-		<li>Sass</li>
-		<li>Javascript</li>
-		<li>JQuery</li>
-		<li>React</li>
+		<li class="aboutskills_li">HTML5</li>
+		<li class="aboutskills_li">CSS3</li>
+		<li class="aboutskills_li">Sass</li>
+		<li class="aboutskills_li">Javascript</li>
+		<li class="aboutskills_li">JQuery</li>
+		<li class="aboutskills_li">React</li>
 	      </ul>
 	    </div>
 
-	    <div class="bio-skills">
-	      <h3>Design</h3>
+	    <div class="aboutskills">
+	      <h3 class="aboutskills_h3">Design</h3>
 	      <ul>
-		<li>Adobe Photoshop</li>
-		<li>Adobe Illustrator</li>
-		<li>Adobe Indesign</li>
-		<li>Adobe InCopy</li>
-		<li>Adobe Flash</li>
-		<li>Autodesk Autocad</li>
-		<li>Sketchup Pro</li>
-		<li>RenderIn</li>
+		<li class="aboutskills_li">Adobe Photoshop</li>
+		<li class="aboutskills_li">Adobe Illustrator</li>
+		<li class="aboutskills_li">Adobe Indesign</li>
+		<li class="aboutskills_li">Adobe InCopy</li>
+		<li class="aboutskills_li">Adobe Flash</li>
+		<li class="aboutskills_li">Autodesk Autocad</li>
+		<li class="aboutskills_li">Sketchup Pro</li>
+		<li class="aboutskills_li">RenderIn</li>
 	      </ul>
 	    </div>
 
@@ -240,7 +240,7 @@
       
 
       <!-- Contact Section Screen-->
-      <section id="contact">
+      <section id="contact" class="section">
 	<h2  class="section_head center dark-grey">Contact</h2>
       </section>
       <!-- End of Contact Section Screen-->

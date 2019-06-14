@@ -10,7 +10,7 @@ const mainNavLinks = mainNavUl.children;
 
 function menuToggle() {
     //console.log('click');
-    mobileNav.classList.toggle('mobile-nav--open');
+    mobileNav.classList.toggle('mobile_nav--open');
     // If it has a positive value
     // It is currently Open, set to null or 0 to close
     if (mainNav.style.maxHeight) {

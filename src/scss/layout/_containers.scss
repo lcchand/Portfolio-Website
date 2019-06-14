@@ -3,19 +3,17 @@
 /* ========================================================================== */
 
 
-body#container {
+.body--container {
     //width: 100%;
     //height: 100%;
     //CSS Smooth Scroll
     //overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    
-
 }
 
 
-section {
+.section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,23 +24,31 @@ section {
 	padding: 10vh 6vw;
     }
 
-    &#intro {
+    &--intro {
 	//background: url('../assets/pexels-laptop.jpg') no-repeat center;
 	//background-size: cover;
 	padding-top: 6em;
     }
 
-    &#webdev {
+    &--webdev {
 	background-color: var(--Theme-Color-Dk);
     }
 
-    &#graphic {
+    &--graphic {
 	background-color: var(--Theme-Color-Black);
     }
 
-    &#about {
+    &--about {
 	background-color: var(--Theme-Color-Grey-Lt);
-    }   
+    }
+
+    &_head {
+	font-family: var(--font-family--heading);
+	font-weight: var(--heading-weight-bold);
+	padding: 1em 0;
+	color: var(--Theme-Color-White);
+	text-align: right;
+    }
 
 }
 
@@ -53,15 +59,5 @@ section {
     font-weight: var(--heading-weight-bold);
     font-style: italic;
     font-size: 3em;
-}
-
-
-
-.section_head {
-    font-family: var(--font-family--heading);
-    font-weight: var(--heading-weight-bold);
-    padding: 1em 0;
-    color: var(--Theme-Color-White);
-    text-align: right;
 }
 
