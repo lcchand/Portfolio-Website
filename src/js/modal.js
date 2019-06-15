@@ -62,8 +62,8 @@ function openModal(e) {
      
 
     // Assemble HTML elements for popup modal
-    detailHTML += `<figure id="galleryItem">`;
-    detailHTML += `<div>`;
+    detailHTML += `<figure id="galleryItem" class="galleryItem">`;
+    detailHTML += `<div class="galleryItem_Divimage">`;
     detailHTML += `<img class="modal_img" src="${ detailImage }">`;
     detailHTML += `</div>`;
     detailHTML += `<div class="galleryItem_info">`;
@@ -86,7 +86,7 @@ function openModal(e) {
     // display overlay
     overlayElement.style.display = 'flex';
     // display modal
-    modalElement.style.display = 'block';
+    modalElement.style.display = 'grid';
 
 }
 

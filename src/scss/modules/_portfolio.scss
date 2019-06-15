@@ -11,6 +11,10 @@
     position: relative;
     transition: transform 0.8s ease-out;
 
+    &:hover {
+	border: 2px solid var(--Theme-Color-White);
+    }
+
     &_figcaption {
 	display: none;
     }
@@ -24,6 +28,7 @@
 	    cursor: pointer;
 	    //filter: blur(2px) brightness(60%);
 	    filter: blur(2px) brightness(45%);
+	   
 
 	    &~figcaption {
 		position: absolute;
@@ -32,6 +37,16 @@
 		top: 45%;
 		text-align: center;
 		color: var(--Theme-Color-White);
+
+		@media #{$brk-desktop} {
+		    font-size: 1.2em;
+		    letter-spacing: 1px;;
+		}
+
+		@media #{$brk-1278} {
+		    font-size: 1.4em;
+		    letter-spacing: 2px;
+		}
 	    }
 	}
     }

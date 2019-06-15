@@ -8,4 +8,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-gap: 5px;
+
+    @media #{$brk-1278} {
+	grid-gap: 10px;
+    }
 }

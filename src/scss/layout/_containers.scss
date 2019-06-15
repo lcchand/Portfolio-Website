@@ -44,7 +44,8 @@
 
     &_head {
 	font-family: var(--font-family--heading);
-	font-weight: var(--heading-weight-bold);
+	//font-weight: var(--heading-weight-bold);//Quattrocento Sans
+	font-weight: var(--heading-weight-regular);//Roboto Slab
 	padding: 1em 0;
 	color: var(--Theme-Color-White);
 	text-align: right;

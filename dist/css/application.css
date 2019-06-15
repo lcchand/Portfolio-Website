@@ -12,7 +12,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -355,8 +355,9 @@ template {
 /*
    Google Fonts - https://fonts.google.com/
    Fonts: Cormorant Garamond (Regular 400 & Regular 400 Italic, Bold 700 & Bold 700 Italic)
+          Roboto Slab(Regular 400, Bold 700)
           Nunito Sans (Regular 400 & Regular 400 Italic, Bold 700)
-          Quattrocento Sans (Regular 400 & Regular 400 Italic, Bold 700)
+          Quattrocento Sans (Regular 400 & Regular 400 Italic, Bold 700) - Old Headings
 */
 /* Any padding or border that’s applied
    will not be added to the rendered width */
@@ -371,7 +372,7 @@ template {
 /* Global CSS3 Variables */
 :root {
   --font-family-intro: 'Cormorant Garamond', Georgia, serif;
-  --font-family--heading:      'Quattrocento Sans', Geneva, Tahoma, sans-serif;
+  --font-family--heading:      'Roboto Slab', Geneva, Tahoma, sans-serif;
   --font-family--body:         'Nunito Sans', Verdana, sans-serif;
   --intro-weight-regular:       400;
   --intro-weight-italic:        400i;
@@ -389,6 +390,7 @@ template {
   --Theme-Color-Dk:             #007adb;
   --Theme-Color-Yellow:         #eccd10;
   --Theme-Color-Red:            #ec3516;
+  --Theme-Color-Orange:         #f48236;
   --Theme-Color-Grey-Lt:        #ecebeb;
   --Theme-Color-Grey-Md:        #d9d7d7;
   --Theme-Color-Grey:           #969091;
@@ -437,11 +439,25 @@ h1 {
 }
 
 h2 {
+  font-weight: var(--heading-weight-regular);
   font-size: 1.5em;
 }
 
 @media (min-width: 768px) {
+  h2 {
+    font-size: 2.0em;
+  }
+}
+
+@media (min-width: 1278px) {
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 768px) {
   h3 {
+    font-weight: var(--heading-weight-regular);
     padding-bottom: .25em;
   }
 }
@@ -555,7 +571,7 @@ button {
 
 .section_head {
   font-family: var(--font-family--heading);
-  font-weight: var(--heading-weight-bold);
+  font-weight: var(--heading-weight-regular);
   padding: 1em 0;
   color: var(--Theme-Color-White);
   text-align: right;
@@ -576,6 +592,12 @@ button {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   grid-gap: 5px;
+}
+
+@media (min-width: 1278px) {
+  .gallery {
+    grid-gap: 10px;
+  }
 }
 
 /* ========================================================================== */
@@ -866,9 +888,26 @@ header {
   width: 90vw;
   height: 90vh;
   margin: 0 auto;
+  padding: 1em;
   overflow-y: scroll;
   -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 90vw;
+    height: 80vh;
+    padding: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    width: 90vw;
+    height: 65vh;
+    padding: 3em;
+  }
 }
 
 .modal_img {
@@ -880,12 +919,13 @@ header {
 .modal_h3 {
   color: var(--Theme-Color);
   padding-bottom: 0.5em;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  line-height: 1em;
 }
 
 @media (min-width: 768px) {
   .modal_h3 {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 }
 
@@ -907,18 +947,20 @@ header {
 
 .modal_p {
   font-size: 0.9em;
-  padding: 0 .25em 0 .25em;
+  line-height: 1.4em;
+  padding-bottom: 1.25em;
+}
+
+@media (min-width: 768px) {
+  .modal_p {
+    padding-bottom: 1.5em;
+  }
 }
 
 .modal_p::first-line {
   font-weight: var(--body-weight-bold);
 }
 
-/*
-.modal p:first-line {
-    font-weight: var(--body-weight-bold);
-}
-*/
 .modalSite {
   margin: 2em 0 1.5em 0;
 }
@@ -935,27 +977,42 @@ header {
   color: var(--Theme-Color-Black);
 }
 
-/*
-
-.modalSite a {
-    text-decoration: none;
-    padding: 1em 1em 1em 1em;
-    background: var(--Theme-Color);
-    color: var(--Theme-Color-White);
+@media (min-width: 1024px) {
+  .galleryItem {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    place-items: center;
+  }
 }
 
-.modalSite a:hover {
-    background: var(--Theme-Color-Yellow);
-    color: var(--Theme-Color-Black);
+@media (min-width: 1278px) {
+  .galleryItem {
+    grid-gap: 3em;
+  }
 }
-*/
+
+@media (min-width: 1024px) {
+  .galleryItem_Divimage {
+    grid-column: 1/2;
+  }
+}
+
 .galleryItem_info {
-  padding: 10px;
+  padding: 0.75em;
 }
 
 @media (min-width: 768px) {
   .galleryItem_info {
-    padding: 20px;
+    padding: 1.5em;
+    grid-column: 2/3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .galleryItem_info {
+    padding: 2.5em;
   }
 }
 
@@ -1150,6 +1207,10 @@ footer {
   transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
 }
 
+.portfolio:hover {
+  border: 2px solid var(--Theme-Color-White);
+}
+
 .portfolio_figcaption {
   display: none;
 }
@@ -1172,6 +1233,20 @@ footer {
   top: 45%;
   text-align: center;
   color: var(--Theme-Color-White);
+}
+
+@media (min-width: 1024px) {
+  .portfolio_img:hover ~ figcaption {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 1278px) {
+  .portfolio_img:hover ~ figcaption {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+  }
 }
 
 @media (min-width: 768px) {

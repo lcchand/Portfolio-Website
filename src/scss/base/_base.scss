@@ -28,12 +28,22 @@ h1 {
 }
 
 h2 {
+    font-weight: var(--heading-weight-regular);
     font-size: 1.5em;
+
+    @media #{$brk-tablet} {
+	font-size: 2.0em;
+    }
+
+    @media #{$brk-1278} {
+	font-size: 2.5em;
+    }
 }
 
 h3 {
 
     @media #{$brk-tablet} {
+	font-weight: var(--heading-weight-regular);
 	padding-bottom: .25em;
     }
 }
