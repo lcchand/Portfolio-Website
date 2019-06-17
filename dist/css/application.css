@@ -533,16 +533,8 @@ button {
 }
 
 .section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: block;
+  margin: auto;
   padding: 8vh 4vw;
   background-color: var(--Theme-Color-White);
 }
@@ -1037,7 +1029,31 @@ header {
 /* ========================================================================== */
 /*   footer.scss                                                              */
 /* ========================================================================== */
+/*
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //margin: auto;
+    padding: 0 4vw;
+    background-color: var(--Theme-Color-White);
+    
+    @media (min-width: 1024px) {
+	width: 100%;//80%
+	//margin: 0 auto;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0 6vw;
+    }
+
+    @media (min-width: 1440px) {
+	width: 100%;//70%
+	//padding: 0 6vw;
+    }
+    
+}
+*/
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1048,11 +1064,12 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0 4vw;
   background-color: var(--Theme-Color-White);
 }
 
 @media (min-width: 1024px) {
-  footer {
+  .footer {
     width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1066,19 +1083,16 @@ footer {
 }
 
 @media (min-width: 1440px) {
-  footer {
+  .footer {
     width: 100%;
   }
 }
 
-.social-icons {
+.footer_ul {
+  width: 100%;
   list-style: none;
   padding: 0;
   text-decoration: none;
-}
-
-.social-icons ul {
-  margin: 0 5% 0 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1089,13 +1103,13 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media (min-width: 1024px) {
-  .social-icons ul {
+  .footer_ul {
     -webkit-box-align: unset;
     -ms-flex-align: unset;
     align-items: unset;
@@ -1108,48 +1122,43 @@ footer {
   }
 }
 
-.social-icons li {
-  margin: 0 4%;
+.footer_li {
+  /*
+	&:first-child {
+	    margin-left: 0;
+
+	    @media (min-width: 1024px) {
+		margin-left: 0;
+	    }
+	}
+
+	&:last-child {
+    	    margin-right: 0;
+
+	    @media (min-width: 1024px) {
+		margin-right: 0;
+	    }
+	}
+	*/
 }
 
 @media (min-width: 768px) {
-  .social-icons li {
+  .footer_li {
     margin: 0 20% 0 20%;
   }
 }
 
 @media (min-width: 1024px) {
-  .social-icons li {
+  .footer_li {
     margin: 0 8% 0 8%;
   }
 }
 
-.social-icons li:first-child {
-  margin-left: 0;
-}
-
-@media (min-width: 1024px) {
-  .social-icons li:first-child {
-    margin-left: 0;
-  }
-}
-
-.social-icons li:last-child {
-  margin-right: 0;
-}
-
-@media (min-width: 1024px) {
-  .social-icons li:last-child {
-    margin-right: 0;
-  }
-}
-
-.social-icons a {
+.footer_a {
   display: block;
-  margin: 0;
 }
 
-.social-icons svg {
+.footer_svg {
   opacity: 1;
   fill: var(--Theme-Color-Grey);
   width: 50px;
@@ -1157,7 +1166,7 @@ footer {
   padding: 10px;
 }
 
-.social-icons svg:hover, .social-icons svg:focus {
+.footer_svg:hover, .footer_svg:focus {
   fill: var(--Theme-Color-Grey-Dk);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -1168,7 +1177,8 @@ footer {
 .copyright {
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -1205,6 +1215,13 @@ footer {
   transition: -webkit-transform 0.8s ease-out;
   transition: transform 0.8s ease-out;
   transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
+  /* @media (min-width: 768px) {
+	flex-direction: row;
+        flex: 1 1 45%;
+        //margin: 0.91145833333333%; // 7 / 768 = 5.5px
+	border: 1px solid var(--Theme-Color-Black);
+
+    }*/
 }
 
 .portfolio:hover {
@@ -1246,19 +1263,6 @@ footer {
   .portfolio_img:hover ~ figcaption {
     font-size: 1.4em;
     letter-spacing: 2px;
-  }
-}
-
-@media (min-width: 768px) {
-  .portfolio {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 45%;
-    flex: 1 1 45%;
-    border: 1px solid var(--Theme-Color-Black);
   }
 }
 

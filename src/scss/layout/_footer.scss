@@ -2,11 +2,13 @@
 /*   footer.scss                                                              */
 /* ========================================================================== */
 
-
+/*
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    //margin: auto;
+    padding: 0 4vw;
     background-color: var(--Theme-Color-White);
     
     @media #{$brk-desktop} {
@@ -23,20 +25,40 @@ footer {
     }
     
 }
+*/
 
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //margin: auto;
+    padding: 0 4vw;
+    background-color: var(--Theme-Color-White);
 
-.social-icons {
-    list-style: none;
-    padding: 0;
-    text-decoration: none;
+    @media #{$brk-desktop} {
+	width: 100%;//80%
+	//margin: 0 auto;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0 6vw;
+    }
 
-    ul {
-	margin: 0 5% 0 5%;
+    @media #{$brk-max} {
+	width: 100%;//70%
+	//padding: 0 6vw;
+    }
+    
+    &_ul {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	text-decoration: none;
+	//margin: 0 5% 0 5%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 
 
 	@media #{$brk-desktop} {
@@ -48,9 +70,9 @@ footer {
 	}
     }
 
-    li {
+    &_li {
 	// margin: 0 5%;
-	margin: 0 4%;
+	//margin: 0 4%;
 
 	@media #{$brk-tablet} {
 	    //margin: 0 25% 0 25%;
@@ -61,36 +83,40 @@ footer {
 	    //margin: 0 15% 0 15%;
 	    margin: 0 8% 0 8%;
 	}
-    }
 
-    li:first-child {
-	margin-left: 0;
-
-	@media #{$brk-desktop} {
+	/*
+	&:first-child {
 	    margin-left: 0;
-	}
-    }
 
-    li:last-child {
-    	margin-right: 0;
-
-	@media #{$brk-desktop} {
-	    margin-right: 0;
+	    @media #{$brk-desktop} {
+		margin-left: 0;
+	    }
 	}
-    }
+
+	&:last-child {
+    	    margin-right: 0;
+
+	    @media #{$brk-desktop} {
+		margin-right: 0;
+	    }
+	}
+	*/
+    }   
 }
+
+
 
 
 // Icons for Github,Twitter, etc.
-.social-icons a {
+.footer_a {
     display: block;
-    margin: 0;
+   // margin: 0;
 }
 
 
 
 
-.social-icons svg {
+.footer_svg {
     opacity: 1;
     fill: var(--Theme-Color-Grey);
     width: 50px;
@@ -109,7 +135,8 @@ footer {
 .copyright {
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 
     @media #{$brk-tablet} {
 	margin-top: 5px;

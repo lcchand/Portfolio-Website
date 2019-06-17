@@ -14,9 +14,11 @@
 
 
 .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+   // display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    display: block;
+    margin: auto;
     padding: 8vh 4vw;
     background-color: var(--Theme-Color-White);
 
