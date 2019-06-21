@@ -14,7 +14,7 @@
 
 
 .section {
-   // display: flex;
+    //display: flex;
     //flex-direction: column;
     //justify-content: center;
     display: block;
@@ -30,7 +30,20 @@
 	//background: url('../assets/pexels-laptop.jpg') no-repeat center;
 	//background-size: cover;
 	padding-top: 6em;
+	height: 100vh;
+	background-image: url('../assets/lance-01.jpg');
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	color: var(--Theme-Color-White);
+
+	@media #{$brk-tablet} {
+	    background-attachment: fixed;
+	}
     }
+
 
     &--webdev {
 	background-color: var(--Theme-Color-Dk);
@@ -38,6 +51,21 @@
 
     &--graphic {
 	background-color: var(--Theme-Color-Black);
+    }
+
+    &--colophon {
+	background-image: linear-gradient(rgba(0, 122, 219, .7), rgba(0, 214, 219, .7)),
+			  url('../assets/workspace.jpg');
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	color: var(--Theme-Color-White);
+
+	@media #{$brk-tablet} {
+	    background-attachment: fixed;
+	}
     }
 
     &--about {

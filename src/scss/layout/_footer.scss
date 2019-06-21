@@ -2,51 +2,23 @@
 /*   footer.scss                                                              */
 /* ========================================================================== */
 
-/*
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    //margin: auto;
-    padding: 0 4vw;
-    background-color: var(--Theme-Color-White);
-    
-    @media #{$brk-desktop} {
-	width: 100%;//80%
-	//margin: 0 auto;
-	flex-direction: row;
-	justify-content: center;
-	padding: 0 6vw;
-    }
-
-    @media #{$brk-max} {
-	width: 100%;//70%
-	//padding: 0 6vw;
-    }
-    
-}
-*/
 
 
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    //margin: auto;
     padding: 0 4vw;
     background-color: var(--Theme-Color-White);
 
+    @media #{$brk-tablet} {
+	padding: 0 6vw;
+    }  
+
     @media #{$brk-desktop} {
-	width: 100%;//80%
-	//margin: 0 auto;
 	flex-direction: row;
 	justify-content: center;
-	padding: 0 6vw;
-    }
-
-    @media #{$brk-max} {
-	width: 100%;//70%
-	//padding: 0 6vw;
+	padding: 0 6vw 10vh 6vw;
     }
     
     &_ul {
@@ -54,7 +26,6 @@ footer {
 	list-style: none;
 	padding: 0;
 	text-decoration: none;
-	//margin: 0 5% 0 5%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -62,45 +33,17 @@ footer {
 
 
 	@media #{$brk-desktop} {
-	    align-items: unset;
-	    justify-content: unset;
+	    justify-content: flex-start;
 	    margin: 0;
 	    margin-right: auto;
-	    padding: 0 6vw;
 	}
     }
 
     &_li {
-	// margin: 0 5%;
-	//margin: 0 4%;
-
-	@media #{$brk-tablet} {
-	    //margin: 0 25% 0 25%;
-	    margin: 0 20% 0 20%;
-	}
 
 	@media #{$brk-desktop} {
-	    //margin: 0 15% 0 15%;
-	    margin: 0 8% 0 8%;
+	    padding-right: 8%;
 	}
-
-	/*
-	&:first-child {
-	    margin-left: 0;
-
-	    @media #{$brk-desktop} {
-		margin-left: 0;
-	    }
-	}
-
-	&:last-child {
-    	    margin-right: 0;
-
-	    @media #{$brk-desktop} {
-		margin-right: 0;
-	    }
-	}
-	*/
     }   
 }
 
@@ -110,7 +53,6 @@ footer {
 // Icons for Github,Twitter, etc.
 .footer_a {
     display: block;
-   // margin: 0;
 }
 
 
@@ -131,16 +73,16 @@ footer {
 }
 
 
-
 .copyright {
     letter-spacing: 1px;
     text-transform: uppercase;
+    white-space: nowrap;
     margin-top: 20px;
     margin-bottom: 30px;
 
     @media #{$brk-tablet} {
-	margin-top: 5px;
-	margin-bottom:30px;
+	margin-top: 25px;
+	margin-bottom:40px;
     }
     
     @media #{$brk-desktop} {

@@ -547,6 +547,20 @@ button {
 
 .section--intro {
   padding-top: 6em;
+  height: 100vh;
+  background-image: url("../assets/lance-01.jpg");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: var(--Theme-Color-White);
+}
+
+@media (min-width: 768px) {
+  .section--intro {
+    background-attachment: fixed;
+  }
 }
 
 .section--webdev {
@@ -555,6 +569,23 @@ button {
 
 .section--graphic {
   background-color: var(--Theme-Color-Black);
+}
+
+.section--colophon {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 219, 0.7)), to(rgba(0, 214, 219, 0.7))), url("../assets/workspace.jpg");
+  background-image: linear-gradient(rgba(0, 122, 219, 0.7), rgba(0, 214, 219, 0.7)), url("../assets/workspace.jpg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: var(--Theme-Color-White);
+}
+
+@media (min-width: 768px) {
+  .section--colophon {
+    background-attachment: fixed;
+  }
 }
 
 .section--about {
@@ -1029,30 +1060,6 @@ header {
 /* ========================================================================== */
 /*   footer.scss                                                              */
 /* ========================================================================== */
-/*
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    //margin: auto;
-    padding: 0 4vw;
-    background-color: var(--Theme-Color-White);
-    
-    @media (min-width: 1024px) {
-	width: 100%;//80%
-	//margin: 0 auto;
-	flex-direction: row;
-	justify-content: center;
-	padding: 0 6vw;
-    }
-
-    @media (min-width: 1440px) {
-	width: 100%;//70%
-	//padding: 0 6vw;
-    }
-    
-}
-*/
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1068,9 +1075,14 @@ footer {
   background-color: var(--Theme-Color-White);
 }
 
+@media (min-width: 768px) {
+  .footer {
+    padding: 0 6vw;
+  }
+}
+
 @media (min-width: 1024px) {
   .footer {
-    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -1078,13 +1090,7 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 0 6vw;
-  }
-}
-
-@media (min-width: 1440px) {
-  .footer {
-    width: 100%;
+    padding: 0 6vw 10vh 6vw;
   }
 }
 
@@ -1110,47 +1116,17 @@ footer {
 
 @media (min-width: 1024px) {
   .footer_ul {
-    -webkit-box-align: unset;
-    -ms-flex-align: unset;
-    align-items: unset;
-    -webkit-box-pack: unset;
-    -ms-flex-pack: unset;
-    justify-content: unset;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     margin: 0;
     margin-right: auto;
-    padding: 0 6vw;
-  }
-}
-
-.footer_li {
-  /*
-	&:first-child {
-	    margin-left: 0;
-
-	    @media (min-width: 1024px) {
-		margin-left: 0;
-	    }
-	}
-
-	&:last-child {
-    	    margin-right: 0;
-
-	    @media (min-width: 1024px) {
-		margin-right: 0;
-	    }
-	}
-	*/
-}
-
-@media (min-width: 768px) {
-  .footer_li {
-    margin: 0 20% 0 20%;
   }
 }
 
 @media (min-width: 1024px) {
   .footer_li {
-    margin: 0 8% 0 8%;
+    padding-right: 8%;
   }
 }
 
@@ -1177,14 +1153,15 @@ footer {
 .copyright {
   letter-spacing: 1px;
   text-transform: uppercase;
+  white-space: nowrap;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
   .copyright {
-    margin-top: 5px;
-    margin-bottom: 30px;
+    margin-top: 25px;
+    margin-bottom: 40px;
   }
 }
 
