@@ -31,7 +31,8 @@
 	//background-size: cover;
 	padding-top: 6em;
 	height: 100vh;
-	background-image: url('../assets/lance-01.jpg');
+	background-image: url('../assets/lance-01-BW-Web.jpg');
+	width: 100%;
 	min-height: 100%;
 	background-position: center;
 	background-size: cover;
@@ -40,7 +41,7 @@
 	color: var(--Theme-Color-White);
 
 	@media #{$brk-tablet} {
-	    background-attachment: fixed;
+	    //background-attachment: fixed;
 	}
     }
 
@@ -55,7 +56,7 @@
 
     &--colophon {
 	background-image: linear-gradient(rgba(0, 122, 219, .7), rgba(0, 214, 219, .7)),
-			  url('../assets/workspace.jpg');
+			  url('../assets/workspace-Web.jpg');
 	width: 100%;
 	background-position: center;
 	background-size: cover;
