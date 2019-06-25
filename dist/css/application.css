@@ -519,6 +519,9 @@ button {
 }
 
 /* ========================================================================== */
+/*  _mixins.scss                                                              */
+/* ========================================================================== */
+/* ========================================================================== */
 /* Layout Styles - Define layout style for major sections of a page           */
 /*                 Grid, Sections, Header, footer, sidebar                    */
 /* ========================================================================== */
@@ -608,7 +611,6 @@ button {
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
   grid-gap: 5px;
 }
 
@@ -616,6 +618,14 @@ button {
   .gallery {
     grid-gap: 10px;
   }
+}
+
+.rows--2 {
+  grid-template-rows: repeat(2, auto);
+}
+
+.rows--3 {
+  grid-template-rows: repeat(3, auto);
 }
 
 /* ========================================================================== */
@@ -1053,6 +1063,64 @@ header {
 }
 
 /* ========================================================================== */
+/*   colopon.scss                                                             */
+/* ========================================================================== */
+.colophon_div {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .colophon_div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+  }
+}
+
+.colophon_article {
+  text-align: center;
+  padding: 15px 20px 20px 15px;
+}
+
+@media (min-width: 1024px) {
+  .colophon_article {
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 1278px) {
+  .colophon_article {
+    padding: 15px 90px;
+  }
+}
+
+.colophon_h4 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.colophon_a {
+  display: inline-block;
+  padding: 10px;
+}
+
+.colophon_svg_icon {
+  height: 65px;
+  width: 65px;
+  fill: var(--Theme-Color-White);
+}
+
+.colophon_svg_icon:hover, .colophon_svg_icon:focus {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* ========================================================================== */
 /*   footer.scss                                                              */
 /* ========================================================================== */
 .footer {
@@ -1127,14 +1195,14 @@ header {
 
 .footer_a {
   display: block;
+  padding: 10px;
 }
 
 .footer_svg {
   opacity: 1;
+  height: 30px;
+  width: 30px;
   fill: var(--Theme-Color-Grey);
-  width: 50px;
-  height: 50px;
-  padding: 10px;
 }
 
 .footer_svg:hover, .footer_svg:focus {
