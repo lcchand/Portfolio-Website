@@ -12,7 +12,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Roboto+Slab:400,700|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -551,7 +551,7 @@ button {
 .section--intro {
   padding-top: 6em;
   height: 100vh;
-  background-image: url("../assets/lance-01-BW-Web.jpg");
+  background-image: url("../assets/lance-03-Web.jpg");
   width: 100%;
   min-height: 100%;
   background-position: center;
@@ -602,7 +602,18 @@ button {
   font-family: var(--font-family-intro);
   font-weight: var(--heading-weight-bold);
   font-style: italic;
-  font-size: 3em;
+  font-size: 3.5em;
+  line-height: .9em;
+  letter-spacing: 2px;
+  margin-top: 7em;
+  margin-bottom: 10px;
+}
+
+.introduction_h4 {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  line-height: 1.3em;
+  color: var(--Theme-Color-White-Lt);
 }
 
 /* ========================================================================== */
@@ -1067,14 +1078,14 @@ header {
 /* ========================================================================== */
 .colophon_div {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
   grid-gap: 15px;
 }
 
 @media (min-width: 768px) {
   .colophon_div {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-gap: 30px;
   }
