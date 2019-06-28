@@ -92,7 +92,6 @@
 
 
 
-
 /* Mobile Nav Settings ----------------- */
 
 .mobile_nav {
@@ -130,7 +129,7 @@
 .hamburger::after {
     content: '';
     display: block;
-    background: var(--Theme-Color-White-Lt);
+    background: var(--Theme-Color-White);
     height: 3px;
     width: 1.75em;
     border-radius: 3px;

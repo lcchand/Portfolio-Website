@@ -26,27 +26,6 @@
 	padding: 10vh 6vw;
     }
 
-    &--intro {
-	//background: url('../assets/pexels-laptop.jpg') no-repeat center;
-	//background-size: cover;
-	padding-top: 6em;
-	height: 100vh;
-	//background-image: url('../assets/lance-01-BW-Web.jpg');
-	background-image: url('../assets/lance-03-Web.jpg');
-	width: 100%;
-	min-height: 100%;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	color: var(--Theme-Color-White);
-
-	@media #{$brk-tablet} {
-	    //background-attachment: fixed;
-	}
-    }
-
-
     &--webdev {
 	background-color: var(--Theme-Color-Dk);
     }
@@ -87,21 +66,3 @@
 
 
 
-.introduction {
-    font-family: var(--font-family-intro);
-    font-weight: var(--heading-weight-bold);
-    font-style: italic;
-    font-size: 3.5em;
-    line-height: .9em;
-    letter-spacing: 2px;
-    margin-top: 7em;
-    margin-bottom: 10px;
-}
-
-
-.introduction_h4 {
-    font-size: 1.2em;
-    letter-spacing: 2px;
-    line-height: 1.3em;
-    color: var(--Theme-Color-White-Lt);
-}

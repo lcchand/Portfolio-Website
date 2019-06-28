@@ -397,7 +397,7 @@ template {
   --Theme-Color-Grey-Dk:        #515151;
   --Theme-Color-Black:          #474747;
   --Theme-Color-White:          #fff;
-  --Theme-Color-White-Lt:       #f5f5f5;
+  --Theme-Color-White-Lt:       #f0f0f0;
   --Body-Text-Color:            #666;
   --figCaption-Color:           rgba(0, 0, 0, 0.9);
   --Overlay:                    rgba(0, 0, 0, 0.5);
@@ -548,19 +548,6 @@ button {
   }
 }
 
-.section--intro {
-  padding-top: 6em;
-  height: 100vh;
-  background-image: url("../assets/lance-03-Web.jpg");
-  width: 100%;
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  color: var(--Theme-Color-White);
-}
-
 .section--webdev {
   background-color: var(--Theme-Color-Dk);
 }
@@ -598,6 +585,38 @@ button {
   text-align: right;
 }
 
+/* ========================================================================== */
+/* _intro.scss  - Head Shot                                                   */
+/* ========================================================================== */
+.section--intro {
+  padding-top: 6em;
+  height: 100vh;
+  /* animation-name duration delay-timing animation-type finish */
+  -webkit-animation: no-transform 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  animation: no-transform 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  background-image: url("../assets/lance-04-1440W.jpg");
+  width: 100%;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  opacity: 0;
+  /* Start hidden then appears */
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+  color: var(--Theme-Color-White);
+}
+
+.animate-pop-in {
+  -webkit-animation: no-transform cubic-bezier(0, 0.3, 0.9, 1.2) forwards;
+  animation: no-transform cubic-bezier(0, 0.3, 0.9, 1.2) forwards;
+  opacity: 0;
+  /* Start Hidden then Visible */
+  -webkit-transform: translateY(-4rem) scale(0.8);
+  transform: translateY(-4rem) scale(0.8);
+}
+
 .introduction {
   font-family: var(--font-family-intro);
   font-weight: var(--heading-weight-bold);
@@ -607,13 +626,107 @@ button {
   letter-spacing: 2px;
   margin-top: 7em;
   margin-bottom: 10px;
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s;
 }
 
-.introduction_h4 {
+@media (min-width: 768px) {
+  .introduction {
+    letter-spacing: 3px;
+    margin-top: 12em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .introduction {
+    letter-spacing: 3px;
+    margin-top: 7.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .introduction {
+    font-size: 5.5em;
+    letter-spacing: 3px;
+    margin-top: 7.5em;
+  }
+}
+
+.introduction_p {
   font-size: 1.2em;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   line-height: 1.3em;
   color: var(--Theme-Color-White-Lt);
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.introduction_svg_icon {
+  height: 65px;
+  width: 65px;
+  fill: var(--Theme-Color-White);
+  text-align: center;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
+/* Animations */
+@Keyframes no-transform {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes rotate-up {
+  100% {
+    -webkit-transform: rotateZ(-4deg);
+    transform: rotateZ(-4deg);
+  }
+}
+
+@keyframes rotate-up {
+  100% {
+    -webkit-transform: rotateZ(-4deg);
+    transform: rotateZ(-4deg);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+  50% {
+    opacity: .8;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+  50% {
+    opacity: .8;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
 /* ========================================================================== */
@@ -833,7 +946,7 @@ header {
 .hamburger::after {
   content: '';
   display: block;
-  background: var(--Theme-Color-White-Lt);
+  background: var(--Theme-Color-White);
   height: 3px;
   width: 1.75em;
   border-radius: 3px;
@@ -944,7 +1057,7 @@ header {
 @media (min-width: 1024px) {
   .modal {
     width: 90vw;
-    height: 65vh;
+    height: 85vh;
     padding: 3em;
   }
 }
