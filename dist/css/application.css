@@ -666,12 +666,65 @@ button {
   width: 65px;
   fill: var(--Theme-Color-White);
   text-align: center;
-  -webkit-animation-delay: 1.4s;
-  animation-delay: 1.4s;
+  -webkit-animation: fade-slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+  animation: fade-slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
+  opacity: 0;
 }
 
 /* Animations */
 @Keyframes no-transform {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-4rem) scale(0.8);
+    transform: translateY(-4rem) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-4rem) scale(0.8);
+    transform: translateY(-4rem) scale(0.8);
+  }
   100% {
     opacity: 1;
     -webkit-transform: none;
@@ -773,11 +826,11 @@ header {
   -ms-flex-pack: start;
   justify-content: flex-start;
   height: 55px;
-  background: var(--Theme-Color);
+  background: transparent;
   color: var(--Theme-Color-White);
   padding: 10px 0;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  -webkit-transition: background 250ms ease-in;
+  transition: background 250ms ease-in;
   z-index: 1;
 }
 
@@ -794,6 +847,12 @@ header {
   header {
     width: 1440px;
   }
+}
+
+.header--scrolltotheme {
+  background: var(--Theme-Color);
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
 .logo {

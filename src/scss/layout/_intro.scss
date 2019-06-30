@@ -79,7 +79,10 @@
     )
     
     text-align: center;
-    animation-delay: 1.4s;
+    //animation-delay: 1.4s;
+    animation: fade-slide-up 1s 1s ease-out forwards,
+	       pulse 2s 3s ease-out infinite;
+    opacity: 0;
 }
 
 
@@ -96,7 +99,27 @@
     }
 }
 
+@keyframes fade-slide-up {
+    0% {
+	opacity: 0;
+	transform: translateY(4rem);
+    }
+    100% {
+	opacity: 1;
+	transform: none;
+    }
+}
 
+@keyframes pop-in {
+    0% {
+	opacity:0;
+	transform: translateY(-4rem) scale(.8);
+    }
+    100% {
+	opacity: 1;
+	transform: none;
+    }
+}
 
 @-webkit-keyframes rotate-up {
     100% {
