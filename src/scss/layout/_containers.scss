@@ -61,10 +61,37 @@
 	color: var(--Theme-Color-White);
 	text-align: right;
     }
-
 }
 
 
 
+.fade-in {
+    opacity: 0;
+    //transform: opacity 1.5s ease-in;
+    
+	       
+}
+
+.fade-in.appear {
+    //opacity: 1;
+    animation: appear .7s .7s ease-out forwards;
+}
 
 
+
+/* Animatikons */
+@keyframes appear {
+    0% {
+	opacity: 0;
+    }
+    
+    50% {
+	opacity: .5;
+
+    }
+    
+    100% {
+	opacity: 1;
+
+    }
+}
