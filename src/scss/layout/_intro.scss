@@ -41,7 +41,7 @@
     letter-spacing: 2px;
     margin-top: 7em;
     margin-bottom: 10px;
-    animation-delay: .8s;//.8s
+    animation-delay: .8s;
 
     @media #{$brk-tablet} {
 	letter-spacing: 3px;
@@ -50,13 +50,13 @@
 
     @media #{$brk-desktop} {
 	letter-spacing: 3px;
-	margin-top:7.5em;
+	margin-top:15.5em;
     }
 
     @media #{$brk-max} {
 	font-size: 5.5em;
 	letter-spacing: 3px;
-	margin-top: 7.5em;
+	margin-top:7em;
     }
 }
 
@@ -74,15 +74,21 @@
 .introduction_svg_icon {
     
     @include svg-icon(
-	$size: 65px,
+	$size: 55px,
 	$fill: var(--Theme-Color-White)
     )
-    
     text-align: center;
-    //animation-delay: 1.4s;
     animation: fade-slide-up 1s 1s ease-out forwards,
 	       pulse 2s 3s ease-out infinite;
     opacity: 0;
+
+
+    @media #{$brk-tablet} {
+	@include svg-icon(
+	    $size: 65px,
+	    $fill: var(--Theme-Color-White)
+	)
+    }
 }
 
 
@@ -118,22 +124,6 @@
     100% {
 	opacity: 1;
 	transform: none;
-    }
-}
-
-@-webkit-keyframes rotate-up {
-    100% {
-	-webkit-transform: rotateZ(-4deg);
-        transform: rotateZ(-4deg);
-    }
-}
-
-
-
-@keyframes rotate-up {
-    100% {
-	-webkit-transform: rotateZ(-4deg);
-        transform: rotateZ(-4deg);
     }
 }
 

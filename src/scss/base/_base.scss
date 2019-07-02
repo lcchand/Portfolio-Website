@@ -29,7 +29,7 @@ h1 {
 
 h2 {
     font-weight: var(--heading-weight-regular);
-    font-size: 1.5em;
+    font-size: 1.7em;//1.5em
 
     @media #{$brk-tablet} {
 	font-size: 2.0em;
@@ -58,27 +58,6 @@ a {
 }
 
 
-/*
-p {
-    font-size: ;
-    line-height: ;
-    margin: ;
-    font-weight: ;
-}
-
-
-
-blockquote {
-    font-size: ;
-    font-style: ;
-    line-height: ;
-    font-weight: ;
-    margin: ;
-    padding: ;
-    border-left: solid size color, ;
-}
-*/
-
 
 /* Lists */
 ul,
@@ -99,12 +78,6 @@ textarea {
 	border: 0;
 }
 
-/*
-input:focus, 
-textarea:focus {
-	transition: ;
-}
-*/
 
 
 /* Button */
@@ -112,3 +85,4 @@ textarea:focus {
 button {
 	outline: 0;
 }
+

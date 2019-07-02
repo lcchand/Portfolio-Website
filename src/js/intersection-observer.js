@@ -1,28 +1,60 @@
-const sectionOne = document.querySelector(".section--webdev");
-const sections = document.querySelectorAll("section");
+/* Select DOM Elements to manipulate with IntersectOberver API */
+const header = document.querySelector("header");
+const sectionIntro = document.querySelector(".section--intro");
+const sectionFaders = document.querySelectorAll(".fade-in");
 
-const options = {
-    root: null, // it is the viewport
-    threshold: 0, // How much of Object is visible 0 = part, 1 = all of it
-    rootMargin: "-150px" // within 150px from top of viewport   
+
+
+/* Observer: sectionIntroObserver -------------------------------*/
+
+// Header with Nav-Bar - Transparent to Theme Color - Vice Versa
+const sectionIntroOptions = {
+    //root: null, // it is the viewport
+    //threshold: 0, // How much of Object is visible 0 = part, 1 = all of it
+    rootMargin: "-50%" // within 50% from top of section--intro   
 };
 
-const observer = new IntersectionObserver(function(entries, observer) {
+const sectionIntroObserver = new IntersectionObserver(function(entries, sectionIntroObserver) {
     entries.forEach(entry => {
-	// Not intersecting - do nothing, exit
+	console.log(entry.target);
+	// Add Theme Color if Intro Section is off screen: not intersecting
+	if(!entry.isIntersecting) {
+	    header.classList.add("header--scrolltotheme");
+	} else {
+	    // Remove Theme Color if scrolled back to: Intro Section
+	    header.classList.remove("header--scrolltotheme");
+	}
+    });
+},  sectionIntroOptions);
+
+
+// Activate observer for Intro Section
+sectionIntroObserver.observe(sectionIntro);
+
+
+
+
+/* Observer: sectionFaders -------------------------------------*/
+
+// Content Sections - Fade-in on scroll
+const appearOptions = {
+    rootMargin: "-10%"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+	//console.log(entry.target);
 	if(!entry.isIntersecting) {
 	    return;
+	} else {
+	    entry.target.classList.add("appear");
+	    appearOnScroll.unobserve(entry.target);
 	}
-	console.log(entry.target);
-	entry.target.classList.toggle("inverse");
-	;// Stop observing object - so we don't undo the classList.toggle
-	observer.unobserve(entry.target);
-    })
-}, options);
+    });
+},  appearOptions);
 
-sections.forEach(section => {
-    observer.observe(section);
+
+// Activate observer for Sections with "fade-in" class
+sectionFaders.forEach(sectionFader => {
+    appearOnScroll.observe(sectionFader);
 });
-
-
-
