@@ -389,8 +389,10 @@ template {
   --Theme-Color-Md:             #009fdb;
   --Theme-Color-Dk:             #007adb;
   --Theme-Color-Yellow:         #eccd10;
+  --Theme-Color-Yellow-Lt:      #fdfadd;
   --Theme-Color-Red:            #ec3516;
   --Theme-Color-Orange:         #f48236;
+  --Theme-Color-Orange-Lt:      #fdeadd;
   --Theme-Color-Grey-Lt:        #ecebeb;
   --Theme-Color-Grey-Md:        #d9d7d7;
   --Theme-Color-Grey:           #969091;
@@ -646,7 +648,7 @@ button {
 @media (min-width: 1024px) {
   .introduction {
     letter-spacing: 3px;
-    margin-top: 15.5em;
+    margin-top: 8em;
   }
 }
 
@@ -654,7 +656,7 @@ button {
   .introduction {
     font-size: 5.5em;
     letter-spacing: 3px;
-    margin-top: 7em;
+    margin-top: 9em;
   }
 }
 
@@ -1034,7 +1036,9 @@ header {
 
 @media (min-width: 768px) {
   .about {
-    grid-gap: 3em;
+    grid-template-columns: 2fr 15px 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0;
   }
 }
 
@@ -1065,14 +1069,34 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  .aboutskills {
+    padding: .25em;
+    background-color: var(--Theme-Color-Grey-Md);
+  }
+}
+
 .aboutskills_h3 {
+  font-weight: var(--heading-weight-regular);
   margin-bottom: .5em;
 }
 
 .aboutskills_li {
   padding-left: 0.25em;
   list-style: square inside;
-  color: var(--Theme-Color);
+  color: var(--Theme-Color-Md);
+}
+
+@media (min-width: 768px) {
+  .aboutskills--dev {
+    grid-column: 3/4;
+  }
+}
+
+@media (min-width: 768px) {
+  .aboutskills--design {
+    grid-column: 4/5;
+  }
 }
 
 /* ========================================================================== */
