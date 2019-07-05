@@ -84,7 +84,8 @@
 .logo a:hover,
 .logo a:focus,
 .main_nav a:hover,
-.main_nav a:focus {
+.main_nav a:focus,
+.main_nav--active {
     background: var(--Theme-Color-Yellow);
     color: var(--Body-Text-Color);
 }

@@ -41,10 +41,9 @@
     }
 
     @media #{$brk-desktop} {
-	width: 90vw;
+	width: 1296px;//1296px is 90vw
 	height: 85vh;
 	padding: 3em;
-
     }
 }
 
