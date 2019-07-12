@@ -20,7 +20,7 @@
     background-color: var(--Theme-Color-White);
 
     @media #{$brk-tablet} {
-	padding: 10vh 6vw;
+	padding: 10vh 6vw;//10vh
     }
 
     &--webdev {
