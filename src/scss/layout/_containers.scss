@@ -23,11 +23,13 @@
 	padding: 10vh 6vw;//10vh
     }
 
-    &--webdev {
+    &--webdev,
+    &--poster {
 	background-color: var(--Theme-Color-Dk);
     }
 
-    &--graphic {
+    &--graphic,
+    &--document {
 	background-color: var(--Theme-Color-Black);
     }
 

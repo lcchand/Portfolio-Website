@@ -63,7 +63,7 @@ function openModal(e) {
 
     // Assemble HTML elements for popup modal
     detailHTML += `<figure id="galleryItem" class="galleryItem">`;
-    detailHTML += `<div class="galleryItem_Divimage">`;
+    detailHTML += `<div class="galleryItem_Div_image">`;
     detailHTML += `<img class="modal_img" src="${ detailImage }">`;
     detailHTML += `</div>`;
     detailHTML += `<div class="galleryItem_info">`;
