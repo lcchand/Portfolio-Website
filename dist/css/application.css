@@ -523,11 +523,11 @@ button {
   }
 }
 
-.section--webdev, .section--poster {
+.section--webdev, .section--poster, .section--concept {
   background-color: var(--Theme-Color-Dk);
 }
 
-.section--graphic, .section--document {
+.section--graphic, .section--document, .section--visualization {
   background-color: var(--Theme-Color-Black);
 }
 

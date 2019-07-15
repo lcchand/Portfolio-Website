@@ -24,12 +24,14 @@
     }
 
     &--webdev,
-    &--poster {
+    &--poster,
+    &--concept {
 	background-color: var(--Theme-Color-Dk);
     }
 
     &--graphic,
-    &--document {
+    &--document,
+    &--visualization {
 	background-color: var(--Theme-Color-Black);
     }
 
