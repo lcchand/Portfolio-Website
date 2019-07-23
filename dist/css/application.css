@@ -616,6 +616,10 @@ button {
   color: var(--Theme-Color-White);
 }
 
+.section--graphics-intro {
+  background-image: url("../assets/WM-Law-Library-BW.jpg");
+}
+
 .animate-pop-in {
   -webkit-animation: no-transform cubic-bezier(0, 0.3, 0.9, 1.2) forwards;
   animation: no-transform cubic-bezier(0, 0.3, 0.9, 1.2) forwards;
