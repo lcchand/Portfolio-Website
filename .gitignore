@@ -29,7 +29,7 @@
 
 # Ignore Folder #
 #################
-src/assets/Working-Graphics
+src/assets/Working-Graphics/*.psd
  
 
 
