@@ -20,13 +20,6 @@
     overflow: hidden;
     background-color: var(--Theme-Color-White);
     margin-bottom: 10px;
-    //flex: 1 0 auto;
-
-    // @media #{$brk-tablet} {
-    //flex-direction: row;
-    //flex: 1 1 45%;
-    //margin: 0 2.5% 2.5% 2.5%; 
-    //}
 
     &_img {
 	display: block;
@@ -35,6 +28,13 @@
     }
     
 }
+
+
+
+.graphic--h2 a:link, a:visited, a:focus {
+  color: inherit;
+}
+
 
 
 
@@ -51,7 +51,7 @@
 
 
 .graphic_skills {
-    //margin-bottom: 1em;
+
     align-self: start;
 
     &_h3 {
@@ -66,7 +66,6 @@
     }
 
     &_li {
-	//list-style: square inside;
 	list-style-type: square;
 	list-style-position: inside;
     }

@@ -55,9 +55,6 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 	    // Add  the .appear class to the current section
 	    entry.target.classList.add("appear");
 	    appearOnScroll.unobserve(entry.target);
-	    // Add the .NAME class to the current <a> in the navbar
-	    //document.querySelector(`.main_nav a[href="#${id}"]`).classList.add('.main_nav--active');
-	   
 	}
     });
 },  appearOptions);
@@ -89,18 +86,16 @@ const navbarHighLight = new IntersectionObserver(function(entries, navbarHighLig
 	console.log(viewPortWidth);
 	console.log(entry);
 	if(!entry.isIntersecting) {
-	   
+	    
 	    return;
 	    // Only Highlight Nav Links if Hamburger/Mobile Nav is hidden
 	    // Mobile Nav is only used if ( min-width < 1024px)
 	} else if(viewPortWidth.matches && entry.isIntersecting) {
 	    console.log(`"#${entry.target.id}" is intersecting`);
 	    // Remove  the '.main_nav--active class from any previous sections
-	    //document.querySelectorAll('.main_nav--active').forEach((el) => el.classList.remove('main_nav--active'));
 	    document.querySelectorAll('.main_nav--active').forEach((el) => el.classList.remove('main_nav--active'));
 	    
 	    // Add the .NAME class to the current <a> in the navbar
-	    //document.querySelector(`.main_nav a[href="#${entry.target.id}"]`).classList.toggle('main_nav--active');
 	    document.querySelector(`header a[href="#${entry.target.id}"]`).classList.toggle('main_nav--active');
 	} else {
 	    return;

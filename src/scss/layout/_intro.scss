@@ -24,9 +24,8 @@
 
 
 .section--graphics-intro {
-    background-image: //linear-gradient(rgba(0, 214, 219, .7), rgba(0, 122, 219, .7)),
-		      //url('../assets/WM-Law-Library.jpg');
-		      url('../assets/WM-Law-Library-BW.jpg');
+    background-image: url('../assets/Graphics-Hero-Gradient.jpg');
+    
 }
 
     
@@ -57,13 +56,31 @@
 
     @media #{$brk-desktop} {
 	letter-spacing: 3px;
-	margin-top:70vh;//8em
+	margin-top: 70vh;//8em
     }
 
     @media #{$brk-max} {
 	font-size: 5.5em;
 	letter-spacing: 3px;
 	margin-top: 65vh;//9em
+    }
+}
+
+
+
+.introduction--graphics {
+    margin-top: 50vh;
+
+    @media #{$brk-tablet} {
+	margin-top: 12em;
+    }
+
+    @media #{$brk-desktop} {
+	margin-top: 70vh;
+    }
+
+    @media #{$brk-max} {
+	margin-top: 65vh;
     }
 }
 

@@ -617,7 +617,7 @@ button {
 }
 
 .section--graphics-intro {
-  background-image: url("../assets/WM-Law-Library-BW.jpg");
+  background-image: url("../assets/Graphics-Hero-Gradient.jpg");
 }
 
 .animate-pop-in {
@@ -660,6 +660,28 @@ button {
   .introduction {
     font-size: 5.5em;
     letter-spacing: 3px;
+    margin-top: 65vh;
+  }
+}
+
+.introduction--graphics {
+  margin-top: 50vh;
+}
+
+@media (min-width: 768px) {
+  .introduction--graphics {
+    margin-top: 12em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .introduction--graphics {
+    margin-top: 70vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .introduction--graphics {
     margin-top: 65vh;
   }
 }
@@ -1605,6 +1627,10 @@ header {
   display: block;
   width: 100%;
   border: 1px solid var(--Theme-Color-White);
+}
+
+.graphic--h2 a:link, a:visited, a:focus {
+  color: inherit;
 }
 
 .graphic_info {

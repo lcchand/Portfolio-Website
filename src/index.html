@@ -166,7 +166,7 @@
 
       <!-- Graphics Section Screen-->
       <section id="graphic" class="section section--graphic fade-in">
-	<h2  class="section_head left">Graphic Design</h2>
+	<h2  class="section_head left"><a class="graphic--h2" href="graphics.html#intro">Graphic Design</a></h2>
 	<div class="gallery rows--2">
 
 	  <article class="portfolio" data-name="Poster Design" data-path="graphics.html#poster"  data-skills="Adobe Indesign, Adobe Photoshop" data-desc="Using professionally supplied photographs and Business development copy, posters were executed using Adobe Creative suite and printed in-house using a large format printer. Featured projects were displayed throughout local office for clients and employees.">
@@ -223,7 +223,7 @@
       <!-- Colophon Section Screen-->
       <section id="colophon" class="section section--colophon fade-in">
 	<h2 class="section_head">Colophon</h2>
-	<p>Blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis, bibendum ut tristique et, egestas quis ipsum suspendisse ultrices? Aliquet nibh praesent tristique magna sit amet purus gravida quis!</p>
+	<p>Semantic HTML5 tags are used in my markup to describe the structure of the document and improve the accessibility of my site. WAI-ARIA landmark rules have been added as attributes to the relevant element or elements. These rules describe the elements they're attached to, and may even add functionality that wouldn't be there otherwise. Alternative text is used wherever any image elements are included.</p>
 
 	<div class="colophon_div">
 	  <article class="colophon_article">
@@ -235,7 +235,7 @@
 	      </a>
 	    </figure>
 	    <h4 class="colophon_h4">Presentation</h4>
-	    <p>The presentation layer of this site was coded using Sass. Compiling the Sass was executed using Node Sass to generate the CSS3 stylesheet. To keep the code modular and easier to understand, I used BEM methodology for naming classes.</p>
+	    <p>The presentation layer of this site was coded using the CSS preprocessor (SCCS) Sass.  Related sections have been broke into partials. Sass Variables are used for repeative values as well as CSS Variables (custom properites). To keep the code modular and easier to understand, I used BEM methodology for naming classes. CSS animation is used throughout site in the mobile menu, hero and category sections of the portfolio main pages.</p>
 	  </article>
 
 	  <article class="colophon_article">
@@ -247,7 +247,7 @@
 	      </a>
 	    </figure>
 	    <h4 class="colophon_h4">Workflow</h4>
-	    <p>Gulp in conjunction with the Node Ecosystem was the toolkit I choose to automate tasks in my development workflow.</p>
+	    <p>Gulp in conjunction with the Node Ecosystem was the toolkit I choose to automate tasks in my development workflow. Compiling the Sass was executed using Node Sass to generate the CSS3 stylesheet. Live browser updating in Chrome, Firefox and Safari was accomplished with BrowserSync. Everyone has their favorite text editor. Mine happens to be Emacs running in MacOSX. The packages (Emacs for plugins) used were Emmet, Web, Sass and Company-mode for code completion. JS2-mode and Tern were used for Javascript. Live code linting was peformed with FlyCheck. Eshell was used within an Emacs buffer window for monitoring Gulp output messages. Git repository maintenance was executed using the command line in a terminal window.</p>
 	  </article>
 
 	  <article class="colophon_article">
@@ -259,7 +259,7 @@
 	      </a>
 	    </figure>
 	    <h4 class="colophon_h4">Interactivity</h4>
-	    <p>To enhance navigating the site and the previewing projects was executed using Javascript.</p>
+	    <p>To enhance navigating the site and the previewing projects was executed using Javascript. Mobilenav.js adds functionality to the hamburger menu using Eventlisteners and class manipulation. Modal.js creates a Modal Overlay for selected Portfolio items using EventListeners, DOM manipulation and Data Attributes. The Intersection Observer API is used for triggering transitions between sections and highlighting navigation.</p>
 	  </article>
 	</div>
       </section>
