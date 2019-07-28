@@ -419,7 +419,6 @@ html, body {
 /*   _base.scss  (body, h1, p etc)                                            */
 /* ========================================================================== */
 body {
-  color: var(--Body-Text-Color);
   font-size: 16px;
   line-height: 1.2em;
   font-family: var(--font-family--body);
@@ -1222,9 +1221,21 @@ header {
 
 @media (min-width: 1024px) {
   .modal {
-    width: 1296px;
+    width: 922px;
     height: 85vh;
     padding: 3em;
+  }
+}
+
+@media (min-width: 1278px) {
+  .modal {
+    width: 1150px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .modal {
+    width: 1296px;
   }
 }
 
@@ -1372,12 +1383,12 @@ header {
 
 .colophon_article {
   text-align: center;
-  padding: 15px 20px 30px 20px;
+  padding: 15px 15px 30px 15px;
 }
 
 @media (min-width: 1024px) {
   .colophon_article {
-    padding: 15px 30px;
+    padding: 15px 20px;
   }
 }
 
@@ -1395,6 +1406,26 @@ header {
 .colophon_a {
   display: inline-block;
   padding: 10px;
+}
+
+.colophon_p {
+  text-align: left;
+}
+
+.colophon_p--wide {
+  padding: 10px 15px;
+}
+
+@media (min-width: 1024px) {
+  .colophon_p--wide {
+    padding: 15px 20px;
+  }
+}
+
+@media (min-width: 1278px) {
+  .colophon_p--wide {
+    padding: 15px 90px;
+  }
 }
 
 .colophon_svg_icon {
@@ -1545,13 +1576,6 @@ header {
   transition: -webkit-transform 0.8s ease-out;
   transition: transform 0.8s ease-out;
   transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
-  /* @media (min-width: 768px) {
-	flex-direction: row;
-        flex: 1 1 45%;
-        //margin: 0.91145833333333%; // 7 / 768 = 5.5px
-	border: 1px solid var(--Theme-Color-Black);
-
-    }*/
 }
 
 .portfolio:hover {
@@ -1629,8 +1653,8 @@ header {
   border: 1px solid var(--Theme-Color-White);
 }
 
-.graphic--h2 a:link, a:visited, a:focus {
-  color: inherit;
+.graphic--h2_a {
+  color: var(--Theme-Color-White);
 }
 
 .graphic_info {

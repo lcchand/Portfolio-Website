@@ -41,9 +41,17 @@
     }
 
     @media #{$brk-desktop} {
-	width: 1296px;//1296px is 90vw
+	width: 922px;//1296px old no.
 	height: 85vh;
 	padding: 3em;
+    }
+
+    @media #{$brk-1278} {
+	width: 1150px;
+    }
+
+    @media #{$brk-max} {
+	width: 1296px;
     }
 }
 
@@ -51,10 +59,6 @@
     width: 100%;
     overflow: hidden;
     border: 2px solid var(--Theme-Color-Black);
-
-    @media #{$brk-desktop} {
-
-    }
 }
 
 
